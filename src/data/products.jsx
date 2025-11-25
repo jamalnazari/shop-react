@@ -1,8 +1,8 @@
-import A06 from '../assets/A06.png'
-import A56 from '../assets/A56.png'
-import A24 from '../assets/A24.png'
-import A34 from '../assets/A34.png'
-import A14 from '../assets/A14.png'
+import A06 from '../assets/A06.jpg'
+import A56 from '../assets/A56.jpg'
+import A24 from '../assets/A24.jpg'
+import A34 from '../assets/A34.jpg'
+import A14 from '../assets/A14.jpg'
 
 export const PRODUCTS = [
    {
@@ -36,3 +36,4 @@ export const PRODUCTS = [
      productimg : A14
    }
 ]
+
