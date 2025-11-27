@@ -16,20 +16,21 @@ const Form = ()=>{
         console.log(data)
     }
     return(
-      
-      <form className="vertical-form " style={{marginTop:'200px'}} onSubmit={handleSubmit(onFormSubmit)}>
-        <input type="text" placeholder="name..."{...register("name")}/>
-        <input type="text" placeholder="Email..."{...register("email")}/>
-        <input type="number" placeholder="Age..."{...register("age")}/>
-        <input type="password" placeholder="password..."{...register("password")}/>
-        {errors.name &&(
-          <p>{errors.password?.message}</p>//خطایی که yupresolver از yup گرفته رو میتوی با این قسمت نشون بدی
-        )}
-        <input type="password" placeholder="confirm Password..."{...register("confirmpassword")}/>
-        <input type="submit" />
-      </form>
-
-        
+      <div className="container d-flex justify-content-around">
+        <div className="div-parent-form col-6">
+          <form className="vertical-form flex-wrap "  onSubmit={handleSubmit(onFormSubmit)}>
+            <input className="inps-form" type="text" placeholder="name..."{...register("name")}/>
+            <input className="inps-form" type="text" placeholder="Email..."{...register("email")}/>
+            <input className="inps-form" type="number" placeholder="Age..."{...register("age")}/>
+            <input className="inps-form" type="password" placeholder="password..."{...register("password")}/>
+            {errors.name &&(
+              <p>{errors.password?.message}</p>//خطایی که yupresolver از yup گرفته رو میتوی با این قسمت نشون بدی
+            )}
+            <input className="inps-form" type="password" placeholder="confirm Password..."{...register("confirmpassword")}/>
+            <input className="inps-form bg-success" type="submit" value={"login"}/>
+          </form>
+        </div>
+      </div>  
     )
 }
 

@@ -115,5 +115,64 @@ body {
 }
 
 .serch{
-  margin-top: 100px;
+  margin-top: 70px;
+}
+.inpserch{
+  color: black;
+  width: 40% ;
+  max-width: 500px;
+  background: rgb(242, 242, 245);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 35px;
+}
+.inpserch::placeholder{
+  color: #bec2bf;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+.hed{
+  background: rgb(241, 241, 241);
+  height: 60px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+
+.serch-link{
+  font-size: 20px;
+  background: rgb(253, 253, 253);
+  color: #03f54b;
+  border: none;
+  border-radius: 8px;
+  width: 120px;
+  padding-left: 70px;
+}
+.login{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+
+.div-parent-form{
+  width:70% ;
+  max-width: 480px;
+  padding: 7px;
+  margin-top: 70px;
+  background: rgb(240, 237, 237);
+  height: 90%;
+  max-height: 450px;
+  border-radius: 7px;
+}
+.inps-form{
+  max-width: 240px;
+  width: 70%;
+  margin: 5px;
+  height: 40px;
+  color: black;
+  background: white;
+  border: none;
+  border-radius: 5px;
 }

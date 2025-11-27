@@ -4,17 +4,24 @@ import Prudact from "./shop/prudact";
 
 export const Serch=()=>{
 
-    const [product , setproduct]=useState("")
-    const [pr , setpr]=useState(PRODUCTS)
+    const [pr , setpr]=useState([])
  
     return(
         <div className="serch">
-            <input value={product} onChange={(e)=>{
-                setproduct(e.target.value)
-                setpr(PRODUCTS.filter(ap=>(ap.name.includes(e.target.value))))
+            
+            <input className="inpserch" placeholder="جستجو"  onChange={(e)=>{
+
+                if(e.target.value.trim()==="") {
+                    setpr([])
+                    return
+                }
+                
+                setpr(PRODUCTS.filter(ap=>(ap.name.includes(e.target.value?e.target.value : []))))
+                
             }} />
             
-            <div>
+            <div className="mt-5">
+
                 {pr.map((prod)=>{
                     
                     return(
@@ -24,6 +31,8 @@ export const Serch=()=>{
                    }
                 )}
             </div>
+            {console.log(pr) }
+            
         </div>
     )
 }
