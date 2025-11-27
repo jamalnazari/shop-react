@@ -9,9 +9,9 @@ const Prudact = ({ data }) => {
 
   return (
    
-      <div className="col-5 col-sm-3 col-md-2 text-center ">
-        <div className="column justify-content-center my-2">
-          <img src={data.productimg} alt={data.name} className="col-12" />
+      <div className="col-6 col-sm-3 col-md-2 text-center ">
+        <div className="column justify-content-center my-5">
+          <img src={data.productimg} alt={data.name} className="col-8" />
           <h5 className="fontG">{data.name}</h5>
           <p className="fontG">{data.price.toLocaleString()} تومان</p>
 
