@@ -3,9 +3,8 @@ import { PRODUCTS } from "../../data/products.jsx";
 
 const Shop = () => {
   return (
-    <div className="shop">
-      <h1>Shop</h1>
-      <div className="row">
+    <div className=" container shop d-flex justify-content-around">
+      <div className="column d-flex justify-content-around flex-wrap shop-child">
         {PRODUCTS.map((prudactdata) => (
           <Prudact key={prudactdata.id} data={prudactdata} />
         ))}

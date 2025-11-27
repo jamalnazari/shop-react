@@ -8,16 +8,20 @@ const Prudact = ({ data }) => {
   const count = item ? item.count : 0;
 
   return (
-    <div className="col-3 text-center">
-      <img src={data.productimg} alt={data.name} width="150" />
-      <h5 className="fontG">{data.name}</h5>
-      <p className="fontG">{data.price.toLocaleString()} تومان</p>
+   
+      <div className="col-5 col-sm-3 col-md-2 text-center ">
+        <div className="column justify-content-center my-2">
+          <img src={data.productimg} alt={data.name} className="col-12" />
+          <h5 className="fontG">{data.name}</h5>
+          <p className="fontG">{data.price.toLocaleString()} تومان</p>
 
-      <button className="btn btn-add btn-info btn-sm" onClick={() => addTocart(data.id)}>+</button>
+          <button className=" btn-add  " onClick={() => addTocart(data.id)}>+</button>
 
-      <span className="mx-1">{count}</span>
-      {count > 0 && (<button className="btn btn-remov btn-danger btn-sm"onClick={() => removeFormcart(data.id)} >-</button>)}
-    </div>
+          <span className="mx-1">{count}</span>
+          {count > 0 && (<button className=" btn-remov  btn-sm"onClick={() => removeFormcart(data.id)} >-</button>)}
+        </div>
+      </div>
+    
   );
 };
 

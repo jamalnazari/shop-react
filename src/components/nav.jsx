@@ -15,11 +15,11 @@ const Navbar =()=>{
     <div className="container ">
       <header className=" row justify-content-around hed ">
         <div className="col-6 col-sm-4">
-          <div className="row justify-content-around">
-             <div className="col-4 my-3 text-end">
+          <div className="row justify-content-end">
+             <div className="col-4 my-3 text-start">
                 <Link to='/cart' className="nav-link">
+                  {itemcount > 0 && <span className="count">{itemcount}</span>}
                   <FontAwesomeIcon icon={faShoppingCart}/>
-                  {itemcount > 0 && <span className="cart-items-count">{itemcount}</span>}
                 </Link>
             </div>
             <div className="col-4 my-3 text-start">
@@ -30,7 +30,7 @@ const Navbar =()=>{
           </div>
         </div>
         <div className="col-6 col-sm-4 my-3">
-          <div className="row">
+          <div className="row justify-content-start">
             <div className="col-6 ">
               
               <Link to={'/serch'} className="serch-link">

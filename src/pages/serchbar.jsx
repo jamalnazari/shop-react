@@ -7,7 +7,7 @@ export const Serch=()=>{
     const [pr , setpr]=useState([])
  
     return(
-        <div className="serch">
+        <div className="serch row justify-content-around">
             
             <input className="inpserch" placeholder="جستجو"  onChange={(e)=>{
 
@@ -20,7 +20,7 @@ export const Serch=()=>{
                 
             }} />
             
-            <div className="mt-5">
+            <div className="mt-5 row justify-content-center">
 
                 {pr.map((prod)=>{
                     

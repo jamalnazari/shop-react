@@ -2,7 +2,14 @@
   margin-top: 80px;
 }
 .shop{
-  margin-top: 100px
+  margin-top: 100px;
+  
+}
+.shop-child{
+  width: 90%;
+  max-width: 700px;
+  height: fit-content;
+ 
 }
 .nav-link {
   color: black ;
@@ -29,7 +36,7 @@
 .int{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
-  margin-left: 700px;
+  
 }
 
 .btnbg:hover{
@@ -38,39 +45,35 @@
 }
 
 .btn-add{
- 
+  width: 100%;
+  max-width: 30px;
   font-size: 20px;
-  background-color: #d0f7be5e;
+  background-color: #fefffd5e;
   color: rgb(30, 255, 0);
-  border: solid 1px white;
-  border-radius: 20px;
-  height: 48px;
+  border: solid 1px rgb(0, 248, 62);
+  border-radius: 4px;
+  max-height: 30px;
+  height: 100%;
+  padding-bottom: 15px;
 }
-.btn-add:hover{
-  background: white;
-  border-radius: 20px;
-  color: #03f54b;
-  border:solid 1px #03f54b;
-  height: 48px;
 
-}
 .btn-remov{
-  font-size: 25px;
-  background-color: #d1909036;
+  width: 100%;
+  max-width: 30px;
+  font-size: 20px;
+  background-color: #fefffd5e;
   color: rgb(255, 0, 0);
-  border: solid 1px white;
-  border-radius: 20px;
-  height: fit-content;
+  border: solid 1px rgb(248, 70, 0);
+  border-radius: 4px;
+  max-height: 30px;
+  height: 100%;
+  padding-bottom: 10px;
   
 }
-.btn-remov:hover{
-  background: white;
-  border-radius: 20px;
-  height: fit-content;
-  color: rgb(248, 8, 8);
-}
+
 .fontG{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(15px , 2vw,20px);
 }
 .cart-font{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -175,4 +178,13 @@ body {
   background: white;
   border: none;
   border-radius: 5px;
+  
+}
+.count{
+  padding: 4px;
+  border-radius: 100%;
+  color: white;
+  background: red;
+  font-size: smaller;
+  
 }
