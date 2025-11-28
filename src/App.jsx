@@ -16,7 +16,7 @@ function App() {
       <Router>
          <Navbar />
         <Routes>
-          <Route path='/' element={<Shop/>}/>
+          <Route path='/shop-react/' element={<Shop/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/login' element={<Form/>}/>
           <Route path='/serch' element={<Serch/>}/>

@@ -15,15 +15,15 @@ const Navbar =()=>{
     <div className="container ">
       <header className=" row justify-content-between hed ">
         <div className="col-6 col-sm-4">
-          <div className="row justify-content-end">
-             <div className="col-4 my-3 text-start">
+          <div className="row justify-content-around">
+             <div className="col-4 my-3 text-center">
                 <Link to='/cart' className="nav-link">
                   {itemcount > 0 && <span className="count">{itemcount}</span>}
                   <FontAwesomeIcon icon={faShoppingCart}/>
                 </Link>
             </div>
             <div className="col-4 my-3 text-start">
-                <Link to='/' className="nav-link">
+                <Link to='/shop-react/' className="nav-link">
                   <FontAwesomeIcon icon={faHome}/>
                 </Link>
             </div>

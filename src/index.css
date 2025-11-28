@@ -150,7 +150,9 @@ body {
   color: #03f54b;
   border: none;
   border-radius: 8px;
-  
+  display: block;
+  width: 90px;
+  text-align: end;
 }
 .login{
   font-size: 20px;
@@ -185,5 +187,5 @@ body {
   color: white;
   background: red;
   font-size: smaller;
-  
+  height: fit-content;
 }
