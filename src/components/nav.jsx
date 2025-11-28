@@ -13,7 +13,7 @@ const Navbar =()=>{
   }, 0)
   return (
     <div className="container ">
-      <header className=" row justify-content-beetwen hed ">
+      <header className=" row justify-content-between hed ">
         <div className="col-6 col-sm-4">
           <div className="row justify-content-end">
              <div className="col-4 my-3 text-start">

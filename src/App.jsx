@@ -11,7 +11,7 @@ import { Serch } from './pages/serchbar.jsx';
 import Form from './pages/form.jsx';
 function App() {
   return (
-    <div className='col-10' style={{direction:'inherit' , height:'5000px' , display:'flex' , justifyContent:'start' , flexDirection:'column' , width:'100%'}}>
+    <div className='col-12'>
       <Shopcontextprovider>
       <Router>
          <Navbar />
