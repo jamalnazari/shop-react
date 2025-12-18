@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PRODUCTS } from "../data/products";
-import Prudact from "./shop/prudact";
+import Prudact from "./prudact";
 
 export const Serch=()=>{
 

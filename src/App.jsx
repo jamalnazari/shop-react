@@ -1,10 +1,9 @@
-
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import { BrowserRouter as   Router, Routes , Route } from 'react-router-dom'
-import Shop from './pages/shop/shop.jsx';
-import Cart from './pages/cart/cart.jsx';
+import Shop from './pages/shop.jsx';
+import Cart from './pages/cart.jsx';
 import Navbar from './components/nav.jsx';
 import {Shopcontextprovider} from './context/shopcontext.jsx'
 import { Serch } from './pages/serchbar.jsx';
@@ -17,7 +16,7 @@ function App() {
          <Navbar />
         <Routes>
           <Route path='/shop-react/' element={<Shop/>}/>
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/shop-react/cart' element={<Cart/>}/>
           <Route path='/login' element={<Form/>}/>
           <Route path='/serch' element={<Serch/>}/>
         </Routes>
