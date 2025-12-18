@@ -1,6 +1,27 @@
 import { useState, useEffect } from "react";
-import { PRODUCTS } from "../data/products.jsx";
+import axios from "axios";
 export const useCart = () => {
+  const [products, setProducts] = useState([]);   // همیشه آرایه
+   useEffect(() => {
+      const asyres= async ()=>{
+              try{
+                 const res=await axios.get('/api/products')
+                    
+                      setProducts(res.data.products)
+                      console.log(res);
+                      
+                      
+              }  
+              catch(err) {
+              console.error(err);
+                    
+
+              };
+           }      
+           
+           asyres();
+  }, []);
+
   const [cartitem, setcartitem] = useState(() => {
     const data = localStorage.getItem("jimi");
     return data ? JSON.parse(data) : [];
@@ -42,14 +63,14 @@ export const useCart = () => {
         let total = 0;
         
         cartitem.forEach(cartItem => {
-            const product = PRODUCTS.find(prod => prod.id === cartItem.id);
+            const product = products.find(prod => prod.id === cartItem.id);
             if (product) {
-                total += product.price * cartItem.count;
+                total += Number(product.price) * cartItem.count;
             }
         });
         
         setint(total);
     }, [cartitem]); 
 
-  return { cartitem, addTocart, removeFormcart, resetitems, int };
+  return { cartitem, addTocart, removeFormcart, resetitems, int ,products};
 };
