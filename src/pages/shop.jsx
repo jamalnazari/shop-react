@@ -20,7 +20,7 @@ const Shop = () => {
   };
   
   return (
-          <div className='container-fluid'>
+          <div className='container'>
             {loading? <div className="loading">🌀 در حال بارگذاری...</div> : ""}
             <div className="prant-slide col-12">
               <button className="nav left" onClick={prev}>‹</button>

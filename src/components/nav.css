@@ -19,14 +19,31 @@
 header{
     background: rgb(255, 255, 255);
     min-height: 130px;
-    
 }
-.serchbox{
-    
-    
-}
-.serch-icon{
-    width: 190px;
-    background: rgba(231, 231, 229, 0.466);
 
+.serchbox {
+    height: 50%;
+}
+
+.serch-icon{
+    width: 90%;
+    background: rgba(231, 231, 229, 0.466);
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    color: rgba(169, 172, 172, 0.747);
+}
+.login{
+    border: 3px solid black;
+    border-radius: 8px;
+    color: black;
+    padding: 10px;
+}
+.fontG{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(15px , 2vw,20px);
+}
+.cart{
+    font-size: x-large;
+    color: black;
 }

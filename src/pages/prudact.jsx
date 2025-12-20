@@ -9,7 +9,7 @@ const Prudact = ({ data }) => {
 
   return (
    
-      <div className="col-3 col-sm-3  prudoct ">
+      <div className="col-3 col-sm-2  prudoct ">
         <div className="column ">
           <img src={data.thumbnail} alt={data.title} className="col-12" />
           <h5 className="fontG">{data.title}</h5>

@@ -13,7 +13,7 @@ const Navbar =()=>{
   }, 0)
   return (
 
-    <header className="container-fluid nav-a d-flex align-items-center text-center">
+    <header className="container-fluid nav-a d-flex align-items-center">
           
              <div className="col-1">
               <img src="/jamal.jpg" className="img"></img>
@@ -25,16 +25,16 @@ const Navbar =()=>{
                 </Link>
             </div>
         
-            <div className="col-7 text-end serchbox">
+            <div className="col-7 text-end serchbox ">
               <div className="serch-icon">
-                 <FontAwesomeIcon  icon={faSearch}/>
+                 <FontAwesomeIcon  icon={faSearch}/>    <span>جستجو      </span>
               </div>
             </div>
-            <div className="col-2">
-                <Link to={'/login'} className="">login</Link>
+            <div className="col-2 text-start ">
+                <Link to={'/login'} className="login fontG">ورود | ثبتنام</Link>
             </div>
-            <div className="col-2">
-                <Link to='/shop-react/cart' className="">
+            <div className="col-2 text-center">
+                <Link to='/shop-react/cart' className="cart">
                   {itemcount > 0 && <span className="count">{itemcount}</span>}
                   <FontAwesomeIcon icon={faShoppingCart}/>
                 </Link>
