@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 export const useCart = () => {
   const [products, setProducts] = useState([]);   // همیشه آرایه
+  const [loading, setLoading] = useState(true);
+
    useEffect(() => {
       const asyres= async ()=>{
               try{
@@ -9,11 +11,13 @@ export const useCart = () => {
                     
                       setProducts(res.data.products)
                       console.log(res);
+                      setLoading(false);       // 👈 لودینگ تموم
                       
                       
               }  
               catch(err) {
               console.error(err);
+              setLoading(false);       // 👈 لودینگ تموم
                     
 
               };
@@ -72,5 +76,5 @@ export const useCart = () => {
         setint(total);
     }, [cartitem]); 
 
-  return { cartitem, addTocart, removeFormcart, resetitems, int ,products};
+  return { cartitem, addTocart, removeFormcart, resetitems, int ,products,loading};
 };

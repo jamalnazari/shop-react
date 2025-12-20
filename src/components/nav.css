@@ -1,0 +1,32 @@
+.home{
+    display: none;
+}
+@media(max-width:768px){
+    .home{
+        display: block;
+    }
+}
+
+.img {
+  width: 70%;
+  height: 90%;
+  object-fit: cover;      
+  border-radius: 50%;    
+}
+.nav-a{
+    direction: rtl;
+}
+header{
+    background: rgb(255, 255, 255);
+    min-height: 130px;
+    
+}
+.serchbox{
+    
+    
+}
+.serch-icon{
+    width: 190px;
+    background: rgba(231, 231, 229, 0.466);
+
+}

@@ -1,4 +1,4 @@
-import './App.css'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import { BrowserRouter as   Router, Routes , Route } from 'react-router-dom'
@@ -10,16 +10,17 @@ import { Serch } from './pages/serchbar.jsx';
 import Form from './pages/form.jsx';
 function App() {
   return (
-    <div className='col-12'>
+    <div className=''>
       <Shopcontextprovider>
       <Router>
-         <Navbar />
+        <Navbar />
         <Routes>
           <Route path='/shop-react/' element={<Shop/>}/>
           <Route path='/shop-react/cart' element={<Cart/>}/>
           <Route path='/login' element={<Form/>}/>
           <Route path='/serch' element={<Serch/>}/>
         </Routes>
+         
       </Router>
       </Shopcontextprovider>
     </div>
