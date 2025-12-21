@@ -1,0 +1,66 @@
+
+
+.img {
+  width: 70%;
+  height: 90%;
+  object-fit: cover;      
+  border-radius: 50%;    
+}
+
+.nav-a{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    direction: rtl;
+    margin-left: 5px;
+}
+header{
+    background: rgb(255, 255, 255);
+    min-height: 130px;
+}
+
+.serchbox {
+    height: 50%;
+}
+
+.serch-icon{
+    width: 90%;
+    background: rgba(231, 231, 229, 0.466);
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    border: 2px solid rgb(170, 166, 166);
+    border-radius: 6px;
+    color: rgba(169, 172, 172, 0.747);
+}
+
+.login{
+    border: 2px solid black;
+    border-radius: 8px;
+    color: black;
+    padding: 4px;
+    background: rgb(230, 228, 227);
+    width: 80%;
+}
+.login:hover{
+    color: black;
+}
+
+.cart{
+    font-size: xx-large;
+    color: black;
+}
+.cart:hover{
+    color: black;
+}
+.shop{
+  margin-top: 200px;
+  height: 40vh;
+}
+.nav-b{
+    background: rgba(218, 215, 215, 0.295);
+    min-height: 70px;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+}
