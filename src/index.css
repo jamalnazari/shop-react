@@ -1,28 +1,8 @@
 .cart{
   margin-top: 80px;
 }
-.shop{
-  margin-top: 100px;
-  
-}
-.shop-child{
-  width: 90%;
-  max-width: 700px;
-  height: fit-content;
- 
-}
-.nav-link {
-  color: black ;
-}
-.navbar{
-  background: #03f54b;
-  border-radius: 6px;
-  position: fixed;
-  top:0 ;
-  left: 0;
-  width:100%;
-  z-index: 1000;
-}
+
+
 .btnbg{
   background: #1bf0ff9d;
   transition: background 0.4s;
@@ -79,11 +59,9 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(10, 4, 4, 0.87);
   background-color: #f8f2f2;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
