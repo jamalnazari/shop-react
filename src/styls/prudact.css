@@ -4,11 +4,11 @@
     background: rgb(241, 7, 7);
     scrollbar-width: none;
     border-radius: 10px;
-
+    height: 100%;
 }
 .prant-slide{
     position: relative;
-
+    height: 90%;
 }
 .nav{
     position: absolute;
@@ -44,7 +44,18 @@
     right: 10px;
 }
 .prudoct{
-    margin: 8px;
+    margin: 2px;
     background: white;
-    border-radius: 7px;
+    border-radius: 5px;
+    height: 97%;
+    text-align: center;
+}
+.product-img{
+    height: 60%;
+    width: 60%;
+}
+.fontG{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(11px , 2vw,15px);
+  font-weight: 600;
 }

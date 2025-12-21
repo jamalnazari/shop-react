@@ -10,19 +10,18 @@ const Shop = () => {
   const sliderRef = useRef(null);
    
   const prev = () => {
-    sliderRef.current?.scrollBy({ left: -332, behavior: 'smooth' });
+    sliderRef.current?.scrollBy({ left: -300, behavior: 'smooth' });
   };
 
   const next = () => {
-    sliderRef.current?.scrollBy({ left: 332, behavior: 'smooth' });
-    console.log("wief");
+    sliderRef.current?.scrollBy({ left: 300, behavior: 'smooth' });
     
   };
   
   return (
-          <div className='container'>
+          <div className='container shop'>
             {loading? <div className="loading">🌀 در حال بارگذاری...</div> : ""}
-            <div className="prant-slide col-12">
+            <div className="prant-slide col-12 " >
               <button className="nav left" onClick={prev}>‹</button>
               <div className="  slider " ref={sliderRef}>
                   {products.map((prudactdata) => (
