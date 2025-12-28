@@ -9,21 +9,24 @@ import {Shopcontextprovider} from './context/shopcontext.jsx'
 import { Serch } from './pages/serchbar.jsx';
 import Form from './pages/form.jsx';
 import { Navbar2 } from './navbar/Nav2.jsx';
+import Apiprovider from './context/Apicontext.jsx'
 function App() {
   return (
     <div className=''>
-      <Shopcontextprovider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/shop-react/' element={<Shop/>}/>
-          <Route path='/shop-react/cart' element={<Cart/>}/>
-          <Route path='/login' element={<Form/>}/>
-          <Route path='/serch' element={<Serch/>}/>
-        </Routes>
-        <Navbar2/>
-      </Router>
-      </Shopcontextprovider>
+        <Apiprovider>
+          <Shopcontextprovider>
+            <Router>
+              <Navbar />
+              <Routes>
+                <Route path='/shop-react/' element={<Shop/>}/>
+                <Route path='/shop-react/cart' element={<Cart/>}/>
+                <Route path='/login' element={<Form/>}/>
+                <Route path='/serch' element={<Serch/>}/>
+              </Routes>
+              <Navbar2/>
+            </Router>
+          </Shopcontextprovider>
+        </Apiprovider>
     </div>
   )
 }

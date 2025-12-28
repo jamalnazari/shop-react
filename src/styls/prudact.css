@@ -55,7 +55,7 @@
     width: 60%;
 }
 .fontG{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:  "Arial Black", "Impact", sans-serif;
   font-size: clamp(11px , 2vw,15px);
   font-weight: 600;
 }

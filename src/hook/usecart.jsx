@@ -7,10 +7,13 @@ export const useCart = () => {
    useEffect(() => {
       const asyres= async ()=>{
               try{
-                 const res=await axios.get('/api/products')
+                 const res=await axios.get('/api/products/category/groceries')
+
+                 //https://dummyjson.com/products/search?q=phone&limit=30  phons
+                 //https://fakestoreapi.com/products/category/electronics  rapid-electon
                     
                       setProducts(res.data.products)
-                      console.log(res);
+                      
                       setLoading(false);       // 👈 لودینگ تموم
                       
                       

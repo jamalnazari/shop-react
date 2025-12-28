@@ -2,10 +2,11 @@ import Prudact from "./prudact.jsx";
 import { useContext,useRef } from "react";
 import { shopcontext } from "../context/shopcontext.jsx";
 import '../styls/prudact.css'
+import { Apicontext } from "../context/Apicontext.jsx";
 
 
 const Shop = () => {
-  const {products,loading}=useContext(shopcontext)
+  const {res1}=useContext(Apicontext)
   
   const sliderRef = useRef(null);
    
@@ -18,13 +19,14 @@ const Shop = () => {
     
   };
   
+  
   return (
           <div className='container shop'>
-            {loading? <div className="loading">🌀 در حال بارگذاری...</div> : ""}
+            
             <div className="prant-slide col-12 " >
               <button className="nav left" onClick={prev}>‹</button>
               <div className="  slider " ref={sliderRef}>
-                  {products.map((prudactdata) => (
+                  {res1.map((prudactdata) => (
                     <Prudact key={prudactdata.id} data={prudactdata} />
                   ))}
               </div>
