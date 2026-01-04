@@ -1,26 +1,24 @@
 import axios from "axios";
-import { useState, useEffect, createContext } from "react";
+import { useState,  createContext, useEffect } from "react";
 
 export const Apicontext = createContext(null);
 
-const Apiprovider = ({ children }) => {
-  const [res1, setres1] = useState([]);
-  const categoryGroups = {
+const categoryGroups = {
       fashion: [
-        "mens-shirts",
-        "mens-shoes",
-        "mens-watches",
-        "womens-dresses",
+        "mens-shirts", //پیراهن مردانه
+        "mens-shoes",//
+        "mens-watches",//
+        "womens-dresses",//
         "womens-shoes",
         "womens-watches",
         "womens-bags",
         "tops",
       ],
       digital: [
-        "smartphones",
-        "laptops",
-        "tablets",
-        "mobile-accessories",
+        "smartphones",//
+        "laptops",//
+        "tablets",//
+        "mobile-accessories",//
       ],
       tech: [
         "lighting",
@@ -31,7 +29,7 @@ const Apiprovider = ({ children }) => {
         "home-decoration",
         "furniture",
         "kitchen-accessories",
-        "groceries",
+        "groceries",//سوپر مارکت
       ],
       beauty: [
         "beauty",
@@ -40,57 +38,45 @@ const Apiprovider = ({ children }) => {
       ],
     };
 
-  useEffect(() => {
+const Apiprovider = ({ children }) => {
+  const [res1, setres1] = useState([]);
+  const [res2, setres2] = useState([]);
+  const [res3, setres3] = useState([]);
+  
+ useEffect(()=>{
     const asynres = async () => {
-
+      
       try{
-        for(const a in categoryGroups){
-          const category=categoryGroups[a]
-          const p=category.map(r => setTimeout(axios.get(`/api/products/category/${r}`),200 ))
-          const res= await Promise.allSettled(p)
-          const j=res.filter(z=> z.status ==="fulfilled")
-          const prod=j.flatMap(x=> x.value.data.products)
-          console.log(prod);
-          setres1(re => [...re , ...prod])
-          
-          
-        }
+        const promise= axios.get('/api/products/category/groceries')
+        const promise2=axios.get('/api/products/category/mens-watches')
+        const promise3=axios.get('/api/products/category/womens-watches')
+
+        const resp1= await promise
+        const resp2= await promise2
+        const resp3= await promise3
+
+        console.log(resp1);
+        console.log(resp2);
+        console.log(resp3);
+
+        setres1(resp1.data.products)
+        setres2(resp2.data.products)
+        setres3(resp3.data.products)
+        
       }
       catch(e){
         console.log(e);
         
       }
-      // try {
-      //   const promises = categories.map((cat) =>
-      //     axios.get(`/api/products/category/${cat}`)
-        
-      //   );
+    }
+      asynres();
+ } , [])
+    
 
-      //   const responses = await Promise.allSettled(promises);
-
-      //   const product = responses
-      //     .filter((r) => r.status === "fulfilled")
-      //     .flatMap((r) => r.value.data.products);
-      //   console.log("محصولات:" , product);
-        
-      //   setres1(product);
-
-      //   // لاگ خطاهای احتمالی
-      //   responses
-      //     .filter((r) => r.status === "rejected")
-      //     .forEach((r) => console.log("failed:", r.reason));
-
-      //   console.log("responses:", responses);
-      // } catch (err) {
-      //   console.log(err);
-      // }
-    };
-
-    asynres();
-  }, []);
+  
 
   return (
-    <Apicontext.Provider value={{ res1 }}>
+    <Apicontext.Provider value={{ res1,res2,res3 }}>
       {children}
     </Apicontext.Provider>
   );

@@ -18,13 +18,13 @@ export const Navbar2 =()=>{
 
             </div>
             <div className="home col-3">
-                <Link to='/shop-react/' className="">
+                <Link to='/' className="">
                   <FontAwesomeIcon icon={faHome}/>
                   <p className='fontG'>خانه</p>
                 </Link>
             </div>
             <div className='col-3'>
-               <Link>
+               <Link to='/Dastehha'>
                   <FontAwesomeIcon icon={faTableCells}/>
                   <p className='fontG'>دسته‌بندی‌ها</p>
                </Link>

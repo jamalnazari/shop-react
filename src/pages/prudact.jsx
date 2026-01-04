@@ -1,11 +1,6 @@
-import { useContext } from "react";
-import { shopcontext } from "../context/shopcontext";
+
 
 const Prudact = ({ data }) => {          
-  const { cartitem, addTocart, removeFormcart } = useContext(shopcontext);
-  
-  const item = cartitem?.find((row) => row.id === data.id);
-  const count = item ? item.count : 0;
 
   return (
    

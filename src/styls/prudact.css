@@ -6,10 +6,7 @@
     border-radius: 10px;
     height: 100%;
 }
-.prant-slide{
-    position: relative;
-    height: 90%;
-}
+
 .nav{
     position: absolute;
     top: 50%;
@@ -36,13 +33,7 @@
     box-shadow: 0 4px 15px rgba(77, 171, 247, 0.4);
 }
 
-.nav.left {
-    left: 10px;
-}
 
-.nav.right {
-    right: 10px;
-}
 .prudoct{
     margin: 2px;
     background: white;
@@ -54,8 +45,8 @@
     height: 60%;
     width: 60%;
 }
-.fontG{
-  font-family:  "Arial Black", "Impact", sans-serif;
-  font-size: clamp(11px , 2vw,15px);
-  font-weight: 600;
+@media (max-width:500px){
+    .product-img{
+        height: 40%;
+    }
 }

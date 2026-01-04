@@ -16,6 +16,7 @@
     background: rgb(255, 255, 255);
     height: 20vh;
 }
+
 header{
     min-height:15vh;
 }
@@ -28,20 +29,32 @@ header{
     width: 70%;
     background: rgb(238, 238, 236);
     padding: 3px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
+    font-weight: 300;
     border: 2px solid rgb(170, 166, 166);
     border-radius: 4px;
     color: rgba(169, 172, 172, 0.747);
+    letter-spacing: 0.9px;
 }
 
+@media (max-width:768px){
+    .nav-a{
+        height: fit-content;
+        background: rgba(255, 253, 253, 0);
+
+    }
+    .serch-icon{
+        border: 2px solid rgb(219, 218, 218);
+        background: rgba(255, 255, 255, 0.671);
+        border-radius: 20px;
+        opacity: 1;
+    }
+}
 .login{
     border: 2px solid black;
     border-radius: 8px;
     color: black;
     padding: 4px;
     background: rgb(230, 228, 227);
-
     width: 80%;
 }
 .login:hover{
@@ -55,10 +68,7 @@ header{
 .cart:hover{
     color: black;
 }
-.shop{
-  margin-top: 110px;
-  height: 40vh;
-}
+
 .nav-b{
     background: rgba(218, 215, 215, 0.295);
     min-height: 70px;
@@ -71,4 +81,80 @@ header{
 }
 .parent-login{
     height: 40%;
+}
+.dropdown {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  overflow: hidden;
+  transition: max-height .4s ease, opacity .3s ease, transform .3s ease;
+}
+
+.menu-item.active .dropdown {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  box-shadow:0px 1px 4px 0px ;
+}
+.dropdown li{
+    list-style: none;
+}
+.Dastehha{
+    
+    background: rgb(198, 237, 255);
+    height: 100vh;
+    padding-top: 130px;
+    padding-bottom: 40px;
+}
+.child-dastehha{
+    max-height: 50px;
+    background: rgb(255, 254, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:20px ;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    scrollbar-width: none;
+    overflow-y: hidden;
+}.child-dastehha:hover{
+    box-shadow: 0px 3px 4px 0px rgba(98, 100, 98, 0.24);
+    transform: translateY(1px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.open{
+    max-height: fit-content;
+}
+.Dastehha p{
+    color: blue;
+    width: 80%;
+    cursor: pointer;
+}
+.Dastehha a{
+    color: black;
+    margin: 2px;
+    width: 100%;
+}
+.Dastehha a:hover{
+    background: rgb(235, 255, 253);
+    transition: background 0.3s ease 
+}
+.pElem{
+    color: rgb(70, 68, 68);
+    cursor: pointer;
+}
+.pElem:hover{
+    color: black;
+    transition: color 0.3s ease-in;
+}
+.dropdown Li a{
+    color: rgb(71, 70, 70);
+}
+.dropdown Li a:hover{
+    color: black;
 }
