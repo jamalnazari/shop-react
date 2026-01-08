@@ -3,40 +3,6 @@ import { useState,  createContext, useEffect } from "react";
 
 export const Apicontext = createContext(null);
 
-const categoryGroups = {
-      fashion: [
-        "mens-shirts", //پیراهن مردانه
-        "mens-shoes",//
-        "mens-watches",//
-        "womens-dresses",//
-        "womens-shoes",
-        "womens-watches",
-        "womens-bags",
-        "tops",
-      ],
-      digital: [
-        "smartphones",//
-        "laptops",//
-        "tablets",//
-        "mobile-accessories",//
-      ],
-      tech: [
-        "lighting",
-        "automotive",
-        "motorcycle",
-      ],
-      home: [
-        "home-decoration",
-        "furniture",
-        "kitchen-accessories",
-        "groceries",//سوپر مارکت
-      ],
-      beauty: [
-        "beauty",
-        "fragrances",
-        "skin-care",
-      ],
-    };
 
 const Apiprovider = ({ children }) => {
   const [res1, setres1] = useState([]);

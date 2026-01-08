@@ -40,8 +40,8 @@ const Navbar = () => {
         </div>
 
         <div className="col-2 text-start parent-login pt-3">
-          <Link to={"/login"}>
-            <button className="login fontG">ورود|ثبت‌نام</button>
+          <Link to={"/register"}>
+            <button className="login">ورود|ثبت‌نام</button>
           </Link>
         </div>
 
@@ -53,9 +53,9 @@ const Navbar = () => {
 
         <div ref={navRef} className="col-10 col-xl-9 d-flex justify-content-start h-25">
           {/* زیبایی */}
-          <div className={`menu-item col-2 h-100 fontG text-start ${openMenu === "beauty" ? "active" : ""}`}>
+          <div className={`menu-item col-2 h-100  text-start ${openMenu === "beauty" ? "active" : ""}`}>
             <p className="pElem" onClick={() => toggle("beauty")}>زیبایی‌وسلامت</p>
-            <ul className="d-flex flex-column dropdown">
+            <ul className="d-flex flex-column dropdown mx-5">
               <li><Link to="/category/beauty">زیبایی</Link></li>
               <li><Link to="/category/fragrances">اتکلن</Link></li>
               <li><Link to="/category/skin-care">نرم‌کننده</Link></li>
@@ -63,9 +63,9 @@ const Navbar = () => {
           </div>
 
           {/* دیجیتال */}
-          <div className={`menu-item col-2 h-100 fontG text-start ${openMenu === "digital" ? "active" : ""}`}>
+          <div className={`menu-item col-2 h-100  text-start ${openMenu === "digital" ? "active" : ""}`}>
             <p className="pElem" onClick={() => toggle("digital")}>دیجیتال‌والکترونیک</p>
-            <ul className="d-flex flex-column dropdown">
+            <ul className="d-flex flex-column dropdown mx-5">
               <li><Link to="/category/lighting">روشنایی</Link></li>
               <li><Link to="/category/automotive">خودرویی</Link></li>
               <li><Link to="/category/motorcycle">موتور‌سیکلت</Link></li>
@@ -73,9 +73,9 @@ const Navbar = () => {
           </div>
 
           {/* تکنولوژی */}
-          <div className={`menu-item col-2 h-100 fontG text-start ${openMenu === "tech" ? "active" : ""}`}>
+          <div className={`menu-item col-2 h-100  text-start ${openMenu === "tech" ? "active" : ""}`}>
             <p className="pElem" onClick={() => toggle("tech")}>تکنولوژی‌ولوازم‌جانبی</p>
-            <ul className="d-flex flex-column dropdown">
+            <ul className="d-flex flex-column dropdown mx-5">
               <li><Link to="/category/laptops">لپتاپ</Link></li>
               <li><Link to="/category/smartphones">گوشی</Link></li>
               <li><Link to="/category/tablets">تبلت</Link></li>
@@ -84,7 +84,7 @@ const Navbar = () => {
           </div>
 
           {/* پوشاک */}
-          <div className={`menu-item col-2 h-100 fontG text-center ${openMenu === "fashion" ? "active" : ""}`}>
+          <div className={`menu-item col-2 h-100  text-center ${openMenu === "fashion" ? "active" : ""}`}>
             <p className="pElem" onClick={() => toggle("fashion")}>پوشاک</p>
             <ul className="d-flex flex-column dropdown">
               <li><Link to="/category/mens-shirts">پیراهن‌مردانه</Link></li>
@@ -98,7 +98,7 @@ const Navbar = () => {
             </ul>
           </div>
           {/* خانه */}
-          <div className={`menu-item col-2 h-100 fontG ${openMenu === "home" ? "active" : ""}`}>
+          <div className={`menu-item col-2 h-100 ${openMenu === "home" ? "active" : ""}`}>
             <p className="pElem" onClick={() => toggle("home")}>خانه‌وزندگی</p>
             <ul className="d-flex flex-column dropdown">
               <li><Link to="/category/home-decoration">دکور</Link></li>

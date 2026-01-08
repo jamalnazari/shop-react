@@ -20,19 +20,22 @@ const Shop = () => {
   
   
   return (
-          <div className='container shop text-end'>
-            
-            <div className="prant-slide col-12 " >
-              <div className="Market">
-              هایپر مارکت
+          <div className=' shop text-end'>
+            <div className="container">
+              <div className="row">
+                <div className="prant-slide col-12 " >
+                  <p className="Market">
+                  هایپر مارکت
+                  </p>
+                  <button className="nav left" onClick={prev}>‹</button>
+                  <div className="  slider " ref={sliderRef}>
+                      {res1.map((prudactdata) => (
+                        <Prudact key={prudactdata.id} data={prudactdata} />
+                      ))}
+                  </div>
+                  <button className="nav right" onClick={next}>›</button>
+                </div>
               </div>
-              <button className="nav left" onClick={prev}>‹</button>
-              <div className="  slider " ref={sliderRef}>
-                  {res1.map((prudactdata) => (
-                    <Prudact key={prudactdata.id} data={prudactdata} />
-                  ))}
-              </div>
-              <button className="nav right" onClick={next}>›</button>
             </div>
             <div className=" container">
               <div className="vitreen row">
@@ -53,9 +56,10 @@ const Shop = () => {
                   <p>موتور</p>
                 </Link>
               </div>
+            </div>
               <div className="container ">
-                <div className="row vitreen2">
-                  <div className="col-6">
+                <div className="row vitreen2 ">
+                  <div className="col-5 vitreen2-a">
                     <div className="row">
                        {res2.map(p=>(
                         <div key={p.id} className="col-12 col-md-6">
@@ -65,7 +69,7 @@ const Shop = () => {
                        ))}
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-5 vitreen2-b">
                     <div className="row">
                       {res3.map(p=>(
                         <div key={p.id} className="col-12 col-md-6">
@@ -77,8 +81,6 @@ const Shop = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
           </div>
   );
 };

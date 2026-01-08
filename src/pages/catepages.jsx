@@ -17,11 +17,15 @@ export default function CategoryPage() {
   }, [slug]);
 
   return (
-    <div className="container col-12 d-flex flex-wrap " style={{paddingTop:'100px'}} >
+    <div className="container  d-flex flex-wrap " style={{paddingTop:'100px'}} >
       {products.map(p => (
-        <div key={p.id} className="col-3">
-          <img src={p.thumbnail} alt={p.title} />
-          <p>{p.title}</p>
+        <div key={p.id} className="col-12 col-md-5 Catepagesproduct ">
+          <div className="row flex-wrap">
+            <img className="col-4" src={p.thumbnail} alt={p.title} />
+            <p className="col-3">{p.title}</p>
+            <p className="col-1">{p.price}</p>
+            <p className="col-12">{p.description}</p>
+          </div>
         </div>
       ))}
     </div>

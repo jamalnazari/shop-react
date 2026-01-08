@@ -113,7 +113,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: "vazirmatn" , sans-serif;
-  font-size: clamp(12px, 1.5vw, 16px);
 }
 
 
@@ -185,9 +184,9 @@ body {
 .Market{
   float: right;
   height: 100%;
-  width: 10%;
+  width: 5%;
   background: green;
-  transform: translateX(-20px);
+  transform: translateX(-35px);
   background: rgb(241, 7, 7);
   border-top-right-radius:10px ;
   writing-mode: vertical-rl;
@@ -216,7 +215,7 @@ body {
   }
 }
 .shop{
-  margin-top: 130px;
+  margin-top: 90px;
   height: fit-content;
 }
 .prant-slide{
@@ -228,9 +227,27 @@ body {
   border-radius: 5px;
   margin-top: 15px;
   text-align: center;
+  width: 100%;
 }
 
 .chvitreen img{
   height: 80%;
   width: 70%;
+}
+.vitreen2{
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.vitreen2-a{
+   margin-right:2px ;
+   border: 1px solid rgba(48, 46, 46, 0.089);
+}
+.vitreen2-b{
+   border: 1px solid rgba(48, 46, 46, 0.089);
+   margin-left: 15px;
+}
+.chvitreen p{
+  font-size: small;
+  color: black;
 }

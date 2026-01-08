@@ -1,7 +1,7 @@
 
 
 .img {
-  width: 50%;
+  width: 40%;
   height: 100%;
   object-fit: cover;      
   border-radius: 50%;    
@@ -14,7 +14,8 @@
     direction: rtl;
     margin-left: 5px;
     background: rgb(255, 255, 255);
-    height: 20vh;
+    height: 10vh;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.096);
 }
 
 header{
@@ -28,12 +29,11 @@ header{
 .serch-icon{
     width: 70%;
     background: rgb(238, 238, 236);
-    padding: 3px;
-    font-weight: 300;
-    border: 2px solid rgb(170, 166, 166);
+    font-weight: 500;
+    border: 1px solid rgb(170, 166, 166);
     border-radius: 4px;
     color: rgba(169, 172, 172, 0.747);
-    letter-spacing: 0.9px;
+    font-size: smaller;
 }
 
 @media (max-width:768px){
@@ -56,6 +56,7 @@ header{
     padding: 4px;
     background: rgb(230, 228, 227);
     width: 80%;
+    font-size: smaller;
 }
 .login:hover{
     color: black;
@@ -94,7 +95,7 @@ header{
   max-height: 500px;
   opacity: 1;
   transform: translateY(0);
-  width: 100%;
+  width:fit-content;
   background: white;
   border-radius: 5px;
   box-shadow:0px 1px 4px 0px ;
@@ -103,7 +104,6 @@ header{
     list-style: none;
 }
 .Dastehha{
-    
     background: rgb(198, 237, 255);
     height: 100vh;
     padding-top: 130px;
@@ -147,6 +147,7 @@ header{
 .pElem{
     color: rgb(70, 68, 68);
     cursor: pointer;
+    font-size: small;
 }
 .pElem:hover{
     color: black;
@@ -154,6 +155,8 @@ header{
 }
 .dropdown Li a{
     color: rgb(71, 70, 70);
+    font-size: x-small
+    
 }
 .dropdown Li a:hover{
     color: black;

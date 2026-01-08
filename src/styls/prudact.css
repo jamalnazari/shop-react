@@ -45,8 +45,20 @@
     height: 60%;
     width: 60%;
 }
+.prudoct h5{
+    font-size: smaller;
+}
+.prudoct p{
+    font-size: smaller;
+}
 @media (max-width:500px){
     .product-img{
         height: 40%;
     }
+}
+.Catepagesproduct{
+    border: 1px solid rgb(221, 216, 216);
+    margin: 10px;
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
