@@ -8,13 +8,13 @@
 }
 
 .nav-a{
+    height: 70px;;
     position: fixed;
     z-index: 100;
     top: 0;
     direction: rtl;
     margin-left: 5px;
     background: rgb(255, 255, 255);
-    height: 10vh;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.096);
 }
 
@@ -22,41 +22,31 @@ header{
     min-height:15vh;
 }
 
-.serchbox {
-    height: 40%;
-}
+
 
 .serch-icon{
-    width: 70%;
+ 
+    width: 100%;
     background: rgb(238, 238, 236);
     font-weight: 500;
     border: 1px solid rgb(170, 166, 166);
     border-radius: 4px;
     color: rgba(169, 172, 172, 0.747);
     font-size: smaller;
+    margin-right: 10px;
+}
+.serch-icon span{
+    margin-right: 20px;
 }
 
-@media (max-width:768px){
-    .nav-a{
-        height: fit-content;
-        background: rgba(255, 253, 253, 0);
-
-    }
-    .serch-icon{
-        border: 2px solid rgb(219, 218, 218);
-        background: rgba(255, 255, 255, 0.671);
-        border-radius: 20px;
-        opacity: 1;
-    }
-}
 .login{
     border: 2px solid black;
     border-radius: 8px;
     color: black;
     padding: 4px;
     background: rgb(230, 228, 227);
-    width: 80%;
-    font-size: smaller;
+    width: 60%;
+    font-size: x-small;
 }
 .login:hover{
     color: black;
@@ -71,17 +61,29 @@ header{
 }
 
 .nav-b{
-    background: rgba(218, 215, 215, 0.295);
+    width: 100%;
+    background: rgba(255, 253, 253, 0);
     min-height: 70px;
     position: fixed;
     z-index: 100;
-    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    bottom: 20px;
+}
+.nav-b-child{
+    background: rgb(255, 255, 255);
+    width: 75%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 16px 21px 0px rgb(194, 191, 191);
+    border-radius: 10px;
 }
 .parent-cart{
-    height: 40%;
+    height: 70%;
 }
 .parent-login{
-    height: 40%;
+    height: 60%;
 }
 .dropdown {
   max-height: 0;
@@ -160,4 +162,51 @@ header{
 }
 .dropdown Li a:hover{
     color: black;
+}
+header{
+    min-height: 70px !important;
+}
+.nav-b-child div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-b-child div .parent-icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    font-size: large;
+}
+.nav-b-child div .parent-icon a{
+    color: rgb(253, 253, 253);
+
+}
+.bg-home{
+    background: rgb(240, 14, 228);
+}
+.bg-cart{
+    background: rgb(3, 255, 255);
+}
+.bg-dasteh{
+    background: rgb(243, 21, 21);
+}
+.bg-user{
+    background: rgb(5, 241, 5);
+}
+@media (max-width:768px){
+    .nav-a{
+        background: rgba(255, 253, 253, 0);
+        height: 60px;
+    }
+    .serch-icon{
+        border: 2px solid rgb(219, 218, 218);
+        background: rgb(255, 255, 255);
+        border-radius: 20px;
+        opacity: 1;
+        width: 100%;
+        margin-top: 20px;
+    }
+    header{
+        min-height: 40px !important;
+    }
 }

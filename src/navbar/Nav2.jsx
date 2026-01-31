@@ -8,35 +8,37 @@ import {faShoppingCart} from '@fortawesome/free-solid-svg-icons' //برای اس
 export const Navbar2 =()=>{
 
     return(
-        <nav className='container-fluid nav-b d-flex row align-items-center text-center d-md-none '>
-            
+      <div className='container-fluid nav-b  d-md-none'>
+         <div className='row nav-b-child'>   
             <div className='col-3'>
+               <div className='parent-icon bg-user'>
                <Link>
                   <FontAwesomeIcon icon={faCircleUser}/>
-                  <p className='fontG'>حساب کاربری</p>
                </Link>
-
+                </div>
             </div>
             <div className="home col-3">
+               <div className='parent-icon bg-home'>
                 <Link to='/' className="">
                   <FontAwesomeIcon icon={faHome}/>
-                  <p className='fontG'>خانه</p>
                 </Link>
-            </div>
+               </div>
+            </div>                
             <div className='col-3'>
+               <div className='parent-icon bg-dasteh'>
                <Link to='/Dastehha'>
                   <FontAwesomeIcon icon={faTableCells}/>
-                  <p className='fontG'>دسته‌بندی‌ها</p>
                </Link>
-
+                </div>
             </div>
             <div className='col-3'>
+               <div className='parent-icon bg-cart'>
                <Link>
                   <FontAwesomeIcon icon={faShoppingCart}/>
-                  <p className='fontG'>سبد خرید</p>
                </Link>
-
+                </div>
             </div>
-        </nav>
+         </div>
+      </div>
     )
 }

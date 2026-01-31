@@ -28,13 +28,13 @@ const Navbar = () => {
       
       className="d-flex container-fluid nav-a align-items-center"
     >
-      <div className="d-none d-md-flex flex-wrap h-100 w-100">
+      <div className="d-none d-md-flex row  h-100 w-100">
         <div className="col-1 h-50">
           <img src="/jamal.jpg" className="img" alt="logo" />
         </div>
 
         <div className="col-7 text-end serchbox pt-3 ">
-          <div className="serch-icon">
+          <div className="serch-icon px-2">
             <FontAwesomeIcon icon={faSearch} /> <span>جستجو</span>
           </div>
         </div>
@@ -110,8 +110,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="d-md-none col-12 text-end serchbox ">
-        <div className="serch-icon">
+      <div className="d-md-none row w-100">
+        <div className="serch-icon col-12 px-2">
           <FontAwesomeIcon icon={faSearch} /> <span>جستجو</span>
         </div>
       </div>

@@ -1,16 +1,16 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { auth } from "../Firebase/firebase"; // مسیر auth خودت
+import { auth } from "../Firebase/firebase"; // مسیر auth
 
-export default function ProtectedRoute({ children }) {
+export default function ProtectedCart({ children }) {
   const [user, setUser] = useState(undefined);
   const location = useLocation();
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (u) => {
       setUser(u || null);
-      console.log(`tis is :${u}`);
+      console.log(`this is :${u}`);
       
     });
     return () => unsub();

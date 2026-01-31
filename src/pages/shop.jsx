@@ -3,9 +3,9 @@ import { useContext,useRef } from "react";
 import '../styls/prudact.css'
 import { Apicontext } from "../context/Apicontext.jsx";
 import { Link } from "react-router-dom";
-
+import Loade from "../components/Loading.jsx";
 const Shop = () => {
-  const {res1,res2,res3}=useContext(Apicontext)
+  const {res1,res2,res3,loading1,loading2,loading3}=useContext(Apicontext)
   
   const sliderRef = useRef(null);
    
@@ -18,18 +18,15 @@ const Shop = () => {
     
   };
   
-  
   return (
           <div className=' shop text-end'>
             <div className="container">
               <div className="row">
                 <div className="prant-slide col-12 " >
-                  <p className="Market">
-                  هایپر مارکت
-                  </p>
+                  <p className="Market">هایپر مارکت</p>
                   <button className="nav left" onClick={prev}>‹</button>
                   <div className="  slider " ref={sliderRef}>
-                      {res1.map((prudactdata) => (
+                      {loading1?<Loade/>:res1.map((prudactdata) => (
                         <Prudact key={prudactdata.id} data={prudactdata} />
                       ))}
                   </div>
@@ -60,24 +57,24 @@ const Shop = () => {
               <div className="container ">
                 <div className="row vitreen2 ">
                   <div className="col-5 vitreen2-a">
-                    <div className="row">
+                    {loading2?<Loade/>:<div className="row">
                        {res2.map(p=>(
                         <div key={p.id} className="col-12 col-md-6">
-                          <img src={p.thumbnail} alt={p.title}/>
+                          <img className="img-fluid" src={p.thumbnail} alt={p.title}/>
                           <p>{p.title}</p>
                         </div>
                        ))}
-                    </div>
+                    </div>}
                   </div>
                   <div className="col-5 vitreen2-b">
-                    <div className="row">
+                    {loading3?<Loade/>:<div className="row">
                       {res3.map(p=>(
                         <div key={p.id} className="col-12 col-md-6">
-                          <img src={p.thumbnail} alt={p.title}/>
+                          <img className="img-fluid" src={p.thumbnail} alt={p.title}/>
                           <p>{p.title}</p>
                         </div>
                        ))}
-                    </div>
+                    </div>}
                   </div>
                 </div>
               </div>
