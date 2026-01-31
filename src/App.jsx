@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import AppLayout from "./app/Layoute/AppLayoute.jsx";
 import { BrowserRouter as Router} from "react-router-dom";
-import Apiprovider from "./context/Apicontext.jsx";
+import Apiprovider from "./features/home/context/Apicontext.jsx";
 
 
 function App() {

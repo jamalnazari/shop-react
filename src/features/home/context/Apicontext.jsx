@@ -15,7 +15,7 @@ const Apiprovider = ({ children }) => {
     const asynres = async () => {
       
       try{
-        const promise= axios.get('/api/products/category/groceries')
+        const promise= axios.get('/api/products/category/groceries')   // api:پروکسی 
         const promise2=axios.get('/api/products/category/mens-watches')
         const promise3=axios.get('/api/products/category/womens-watches')
 

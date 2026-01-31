@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Loade from "../components/Loading";
+import Loade from "../sheared/Loading/CircleLoading";
 
 export default function CategoryPage() {
   const { slug } = useParams();
