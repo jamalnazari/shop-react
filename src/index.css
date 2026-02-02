@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Vazirmatn";
-  src: url("./styls/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  src: url("./sheared/fonts/Vazirmatn-Bold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Vazirmatn";
-  src: url("./styls/fonts/Vazirmatn-Medium.woff2") format("woff2");
+  src: url("./sheared/fonts/Vazirmatn-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Vazirmatn";
-  src: url("./styls/fonts/Vazirmatn-Bold.woff2") format("woff2");
+  src: url("./sheared/fonts/Vazirmatn-Regular.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -321,6 +321,7 @@ body {
     .product-img{
         height: 40%;
     }
+    
 }
 .Catepagesproduct{
     border: 1px solid rgb(221, 216, 216);

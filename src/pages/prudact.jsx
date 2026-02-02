@@ -10,7 +10,7 @@ const Prudact = ({ data }) => {
           <p className="fontG">{data.price.toLocaleString()}$</p>
       </div>
     
-  );
+    );
 };
 
 export default Prudact;

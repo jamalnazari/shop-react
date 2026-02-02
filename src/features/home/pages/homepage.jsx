@@ -1,7 +1,7 @@
-import { Homeslider } from "./components/homeSlider";
-import { Homevitreen1 } from "./components/homevitreen-a";
-import { Homevitreen2 } from "./components/homevitreen-b";
-import Apiprovider from "./context/Apicontext";
+import { Homeslider } from "../components/homeSlider";
+import { Homevitreen1 } from "../components/homevitreen-a";
+import { Homevitreen2 } from "../components/homevitreen-b";
+import Apiprovider from "../context/Apicontext";
 export const Homepage=()=>{
     
     return (

@@ -19,13 +19,13 @@ export const Homeslider=()=>{
               <div className="row">
                 <div className="prant-slide col-12 " >
                   <p className="Market">هایپر مارکت</p>
-                  <button className="nav left" onClick={prev}>‹</button>
+                  <button className="nav left d-none d-md-block" onClick={prev}>‹</button>
                   <div className="  slider " ref={sliderRef}>
                       {loading1?<Loade/>:res1.map((prudactdata) => (
                         <Prudact key={prudactdata.id} data={prudactdata} />
                       ))}
                   </div>
-                  <button className="nav right" onClick={next}>›</button>
+                  <button className="nav right d-none d-md-block" onClick={next}>›</button>
                 </div>
               </div>
             </div>

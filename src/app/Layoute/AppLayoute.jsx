@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
-import  Navbar  from "../../navbar/nav.jsx"
-import { Navbar2 } from "../../navbar/Nav2.jsx";
+import  Navbar  from "../navbar/nav.jsx"
+import { Navbar2 } from "../navbar/nav2.jsx";
 import { AppRoutes } from "../Routing/Routes.jsx";
 function AppLayout() {
   const location = useLocation();

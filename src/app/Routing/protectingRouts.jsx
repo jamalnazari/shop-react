@@ -1,5 +1,5 @@
-import ProtectedCart from "../../components/protectedcart.jsx";
-import Cart from "../../pages/cart.jsx";
+import ProtectedCart from "./protecting.jsx";
+import Cart from "../../features/cart/cart.jsx";
 //هرچقدرکه بخوام میتونم saveroute بسازم 
 const Savecart=()=>{
 

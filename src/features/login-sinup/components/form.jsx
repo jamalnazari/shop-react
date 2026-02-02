@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";    //یه تابع از کتابخانه Firebase Auth 
-import { auth } from "../Firebase/firebase"; 
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../Firebase/firebase";
 import { useNavigate, Link } from "react-router-dom";
 
-const Register = () => {
-  const [name, setName] = useState("");
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
@@ -12,17 +11,13 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  const handleRegister = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setErr("");
     setLoading(true);
 
     try {
-      const userCred = await createUserWithEmailAndPassword(auth, email, password);
-
-      
-      await updateProfile(userCred.user, { displayName: name });
-
+      await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
     } catch (e2) {
       setErr(e2.message);
@@ -33,16 +28,9 @@ const Register = () => {
 
   return (
     <div className="container mt-5" style={{ maxWidth: 500 }}>
-      <h3 className="text-center">ثبت‌نام</h3>
+      <h3 className="text-center">ورود</h3>
 
-      <form onSubmit={handleRegister}>
-        <input
-          className="form-control my-2"
-          placeholder="نام"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-
+      <form onSubmit={handleLogin}>
         <input
           type="email"
           className="form-control my-2"
@@ -61,16 +49,16 @@ const Register = () => {
 
         {err && <div className="alert alert-danger py-2">{err}</div>}
 
-        <button className="btn btn-success w-100 mt-2" disabled={loading}>
-          {loading ? "در حال ثبت‌نام..." : "ثبت‌نام"}
+        <button className="btn btn-primary w-100 mt-2" disabled={loading}>
+          {loading ? "در حال ورود..." : "ورود"}
         </button>
       </form>
 
       <p className="text-center mt-3">
-        قبلاً ثبت‌نام کردی؟ <Link to="/login">ورود</Link>
+        حساب نداری؟ <Link to="/register">ثبت‌نام</Link>
       </p>
     </div>
   );
 };
 
-export default Register;
+export default Login;
