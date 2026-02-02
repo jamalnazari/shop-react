@@ -19,7 +19,7 @@ export const Navbar2 =()=>{
             </div>
             <div className="home col-3">
                <div className='parent-icon bg-home'>
-                <Link to='/' className="">
+                <Link to='/shop-react' className="">
                   <FontAwesomeIcon icon={faHome}/>
                 </Link>
                </div>

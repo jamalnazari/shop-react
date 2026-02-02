@@ -10,7 +10,7 @@ export const AppRoutes=()=>{
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
    return(
            <Routes>
-             <Route path="/" element={<Homepage />} />
+             <Route path="/shop-react" element={<Homepage />} />
              <Route path="/shop-react/cart" element={<Savecart/>}/>
              <Route path="/register" element={<Register />} />
              <Route path="/login" element={<Login />} />
