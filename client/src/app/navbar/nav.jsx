@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
 
         <div className="col-2 text-start parent-login pt-3">
-          <Link to={"/shop-react/dinup"}>
+          <Link to={"/shop-react/sinup"}>
             <button className="login">ورود|ثبت‌نام</button>
           </Link>
         </div>
