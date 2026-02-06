@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Loade from "../../../sheared/Loading/CircleLoading";
 import { Link, useNavigate } from "react-router-dom";
-import "../style/style.css"
+import "../style/sinup.css"
 function Form(){
 
     const [username,setusername]=useState("")
@@ -22,16 +22,16 @@ function Form(){
          .then(res=>res.json())
          .then(data=>console.log(data))
          setloading(false)
-         navigat("/shop-react/")
+         if(!loading) navigat("/shop-react/")
     }
     return (
       <div className="container ">
         <div className="row w-100 d-flex justify-content-center">
             <div className="col-12 col-sm-10 col-md-4">
-                <form className=" p-4" onSubmit={handlesubmit}>
+                <form className=" p-4 form-sinup" onSubmit={handlesubmit}>
 
                     <input 
-                    className="w-100 " 
+                    className="w-100 input-sinup" 
                     type="username" 
                     value={username} 
                     onChange={(e)=>setusername(e.target.value)}
@@ -39,7 +39,7 @@ function Form(){
                     />
 
                     <input 
-                    className="w-100 " 
+                    className="w-100 input-sinup" 
                     type="email" 
                     value={email} 
                     onChange={(e)=>setemail(e.target.value)}
@@ -47,18 +47,18 @@ function Form(){
                     />
                     
                     <input 
-                    className="w-100 " 
+                    className="w-100 input-sinup" 
                     type="password" 
                     value={password} 
                     onChange={(e)=>setpassword(e.target.value)}
                     placeholder="رمزعبور"
                     />
                     <button 
-                    className="w-50">
+                    className="w-50 button-sinup">
                         {loading? <Loade/>:" ثبتنام"}
                     </button>
 
-                    <p>قبلا ثبتنام‌کردم  .<Link>ورود </Link></p>
+                    <p>قبلا ثبتنام‌کردم  .<Link to="/shop-react/login" >ورود </Link></p>
                         
                 </form>
             </div>    
