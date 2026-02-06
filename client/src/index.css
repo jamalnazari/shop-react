@@ -265,7 +265,9 @@ body {
   margin-top: 15px;
   text-align: center;
   width: 100%;
-}
+  padding: 10px;
+  box-shadow:inset 0px 2px 9px 1px rgb(236, 235, 235);
+} 
 
 .chvitreen img{
   height: 80%;
@@ -278,10 +280,12 @@ body {
 
 .vitreen2-a{
    margin-right:2px ;
+  box-shadow:inset 0px 2px 9px 1px rgb(236, 235, 235);
    border: 1px solid rgba(48, 46, 46, 0.089);
 }
 .vitreen2-b{
    border: 1px solid rgba(48, 46, 46, 0.089);
+  box-shadow:inset 0px 2px 9px 1px rgb(238, 237, 237);
    margin-left: 15px;
 }
 .chvitreen p{

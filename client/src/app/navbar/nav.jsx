@@ -30,7 +30,7 @@ const Navbar = () => {
     >
       <div className="d-none d-md-flex row  h-100 w-100">
         <div className="col-1 h-50">
-          <img src="/jamal.jpg" className="img" alt="logo" />
+          <img src="/shop-react/jamal.jpg" className="img" alt="logo" />
         </div>
 
         <div className="col-7 text-end serchbox pt-3 ">
@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
 
         <div className="col-2 text-start parent-login pt-3">
-          <Link to={"/register"}>
+          <Link to={"/shop-react/form"}>
             <button className="login">ورود|ثبت‌نام</button>
           </Link>
         </div>
