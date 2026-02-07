@@ -35,7 +35,7 @@ const Navbar = () => {
 
         <div className="col-7 text-end serchbox pt-3 ">
           <div className="serch-icon px-2">
-            <FontAwesomeIcon icon={faSearch} /> <span>جستجو</span>
+            <FontAwesomeIcon icon={faSearch} />
           </div>
         </div>
 

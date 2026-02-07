@@ -9,6 +9,7 @@
     border-radius: 20px;
 }
 .input-login{
+    color: aqua;
     background: white;
     border: solid 1px rgb(67, 202, 255);
     border-radius:5px ;
@@ -26,7 +27,7 @@
 }
 ::placeholder{
     font-size: clamp(14px ,2vw , 17px);
-    color: rgba(167, 253, 239, 0.76);
+    color: rgba(198, 201, 200, 0.76);
 }
 .button-login:hover{
     background: rgb(19, 211, 245);

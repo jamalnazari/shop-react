@@ -1,17 +1,32 @@
-import { useState } from "react"
-import { useNavigate,Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useNavigate,Link, data } from "react-router-dom"
 import "../style/login.css"
+import Loade from "../../../sheared/Loading/CircleLoading"
 function Login(){
+    const [users,setusers]=useState([])
     const [email, setemail]=useState("")
     const [password, setpassword]=useState("")
     const [loading,setloading]=useState(false)
     const navigat=useNavigate()
 
-    const handlesubmit=()=>{
-        console.log("oasr");
+    useEffect(()=>{
+        fetch("http://localhost:3001/users")
+        .then(res=>res.json())
+        .then(data=>setusers(data))
+        
+    },[])
+
+    const handlesubmit=(e)=>{
+        setloading(true)
+        e.preventDefault()
+        
+         const user=users.find(u=> u.email===email&&u.password===password )
+         if(user) navigat("/shop-react/")
+         console.log(user);
+         setloading(false)            
         
     }
-
+    
     return(
         <div className="container">
           <div className="row d-flex justify-content-center">

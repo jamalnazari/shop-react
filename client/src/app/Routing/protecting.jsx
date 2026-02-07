@@ -5,14 +5,6 @@ export default function ProtectedCart({ children }) {
   const [user, setUser] = useState(undefined);
   const location = useLocation();
 
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => {
-      setUser(u || null);
-      console.log(`this is :${u}`);
-      
-    });
-    return () => unsub();
-  }, []);
 
   if (user === undefined) {
     return <div className="container mt-5">در حال بررسی...</div>;
