@@ -4,7 +4,7 @@ import { Navbar2 } from "../navbar/nav2.jsx";
 import { AppRoutes } from "../Routing/Routes.jsx";
 function AppLayout() {
   const location = useLocation();
-  const hideNavRoutes = ["/register", "/login"];
+  const hideNavRoutes = ["/shop-react/sinup", "/shop-react/login"];
   const hideNav = hideNavRoutes.includes(location.pathname);
 
   return (
