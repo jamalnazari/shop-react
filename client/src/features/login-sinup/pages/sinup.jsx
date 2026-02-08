@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../style/sinup.css"
+import "../style/auth.css"
 function Form(){
 
     const [username,setusername]=useState("")
@@ -19,7 +19,7 @@ function Form(){
       <div className="container-fluid ">
         <div className="row w-100  d-flex justify-content-center">
             <div className="col-12  col-sm-10 col-md-7">
-                <form className="  form-sinup" onSubmit={handlesubmit}>
+                <form className="  form-auth" onSubmit={handlesubmit}>
 
                     <div className="div1">
                         <p className="p1">ثبت‌نام</p>
@@ -27,7 +27,7 @@ function Form(){
                     </div>
                     <div className="div2">
                         <input 
-                        className=" input-sinup" 
+                        className=" input-auth" 
                         type="username" 
                         value={username} 
                         onChange={(e)=>setusername(e.target.value)}
@@ -35,7 +35,7 @@ function Form(){
                         />
 
                         <input 
-                        className=" input-sinup" 
+                        className=" input-auth" 
                         type="email" 
                         value={email} 
                         onChange={(e)=>setemail(e.target.value)}
@@ -43,14 +43,14 @@ function Form(){
                         />
                         
                         <input 
-                        className=" input-sinup" 
+                        className=" input-auth" 
                         type="password" 
                         value={password} 
                         onChange={(e)=>setpassword(e.target.value)}
                         placeholder="رمزعبور"
                         />
                         <button 
-                        className="w-50 button-sinup">
+                        className="w-50 button-auth">
                             ثبتنام
                         </button>
                     </div>    

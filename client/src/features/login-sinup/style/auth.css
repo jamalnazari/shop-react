@@ -1,4 +1,4 @@
-.form-login{
+.form-auth{
     margin-top: 70px;
     display: flex;
     flex-direction: row;
@@ -9,8 +9,9 @@
     border: solid 1px black;
     border-radius:50px ;
     background: rgb(91, 209, 238);
+    box-shadow: 10px 10px 1300px 200px rgb(55, 190, 253);
 }
-.input-login{
+.input-auth{
     height: 50px;
     width: 70%;
     background: rgb(253, 253, 253);
@@ -20,7 +21,7 @@
     margin: 2px;
     box-shadow:inset 0px 0px 7px 1px rgba(239, 240, 239, 0.486)
 }
-.button-login{
+.button-auth{
     background: rgb(255, 255, 255);
     border: solid 1px rgb(243, 243, 243);
     color: black;
@@ -34,12 +35,12 @@
     font-size: clamp(14px ,2vw , 17px);
     color: rgba(116, 117, 116, 0.76);
 }
-.button-login:hover{
+.button-auth:hover{
    border: solid 1px rgb(28, 204, 248);
    box-shadow: inset 0 0 5px 1px rgb(32, 210, 241);
    transition: border .5s ease , box-shadow .5s ease;
 }
-.form-login .div1{
+.form-auth .div1{
     z-index: 100;
     box-shadow: 13px 1px 16px 1px rgba(49, 121, 255, 0.829);
     width: 50%;
@@ -51,7 +52,7 @@
     justify-content: center;
     align-items: center;
 }
-.form-login .div2{
+.form-auth .div2{
     background: rgb(91, 209, 238);
    height: 100%;
    width: 50%;
@@ -62,32 +63,33 @@
    border-radius: 50px;
 
 }
-.form-login .div1 .p1{
+.form-auth .div1 .p1{
     font-size: xx-large;
     color: aqua;
 }
-.form-login .div1 .p2{
+.form-auth .div1 .p2{
     color: aqua;
 
 }
-.form-login .div1 .p2 a{
+.form-auth .div1 .p2 a{
     border: solid 1px rgb(31, 206, 230);
     border-radius: 8px;
     padding: 7px;
     color: aqua;
 }
 @media (max-width:550px){
-    .form-login{
+    .form-auth{
         flex-direction: column;
+        box-shadow: 10px 10px 300px 70px rgb(55, 190, 253);
         height: 450px;
     }
 
-    .form-login .div1{
+    .form-auth .div1{
         width: 100%;
         box-shadow: 1px 13px 16px 0px rgba(49, 121, 255, 0.829);
         height: 40%;
     }
-    .form-login .div2{
+    .form-auth .div2{
         width: 100%;
     }
 }

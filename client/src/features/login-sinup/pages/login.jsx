@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react"
-import { useNavigate,Link, data } from "react-router-dom"
-import "../style/login.css"
-import Loade from "../../../sheared/Loading/CircleLoading"
+import { useState } from "react"
+import { useNavigate,Link} from "react-router-dom"
 function Login(){
     const [email, setemail]=useState("")
     const [password, setpassword]=useState("")
-    const [loading,setloading]=useState(false)
     const navigat=useNavigate()
 
     const handlesubmit=(e)=>{
@@ -26,14 +23,14 @@ function Login(){
         <div className="container-fluid">
             <div className="row w-100 vh d-flex justify-content-center">
                 <div className="col-12 col-sm-10 col-md-7">
-                    <form className="form-login" onSubmit={handlesubmit}>
+                    <form className="form-auth" onSubmit={handlesubmit}>
                         <div className="div1">
                             <p className="p1">ورود</p>
                             <p className="p2">حسابی‌ندارید؟<Link to="/shop-react/sinup" >ثبت‌نام</Link></p>
                         </div>
                         <div className="div2">
                             <input 
-                            className=" input-login" 
+                            className=" input-auth" 
                             type="email" 
                             value={email} 
                             onChange={(e)=>setemail(e.target.value)}
@@ -41,14 +38,14 @@ function Login(){
                             />
                             
                             <input 
-                            className=" input-login" 
+                            className=" input-auth" 
                             type="password" 
                             value={password} 
                             onChange={(e)=>setpassword(e.target.value)}
                             placeholder="رمزعبور"
                             />
                             <button 
-                            className="w-50 button-login">
+                            className="w-50 button-auth">
                             ورود 
                             </button>
                         </div>
