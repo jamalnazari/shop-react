@@ -33,7 +33,7 @@ export const Navbar2 =()=>{
             </div>
             <div className='col-3'>
                <div className='parent-icon bg-cart'>
-               <Link>
+               <Link to={'/shop-react/cart'}>
                   <FontAwesomeIcon icon={faShoppingCart}/>
                </Link>
                 </div>

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loade from "../sheared/Loading/CircleLoading";
@@ -67,7 +67,11 @@ export default function CategoryPage() {
   return (
     <div className="container d-flex flex-wrap" style={{ paddingTop: "100px" }}>
       {products.map((p) => (
-        <div key={p.id} className="col-12 col-md-5 Catepagesproduct mb-4">
+        <Link
+          key={p.id}
+          to={`/product/${p.id}`}
+          className="col-12 col-md-5 Catepagesproduct mb-4 text-decoration-none text-dark"
+        >
           <div className="row flex-wrap align-items-center">
             <img
               className="col-4 img-fluid rounded"
@@ -83,7 +87,7 @@ export default function CategoryPage() {
             </div>
             <p className="col-12 mt-2 text-muted">{p.description}</p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
