@@ -1,11 +1,13 @@
-import { createContext, useContext, useMemo, useState, useEffect } from "react";
+import { createContext, useMemo, useState, useEffect } from "react";
 
 export const CartContext = createContext(null);
 
 const CART_STORAGE_KEY = "shop_cart";
 
-export const CartProvider = ({ children }) => {
-  // بارگذاری از localStorage در ابتدا
+ const CartProvider = ({ children }) => {
+
+  
+
   const [items, setItems] = useState(() => {
     try {
       const savedCart = localStorage.getItem(CART_STORAGE_KEY);
@@ -90,11 +92,5 @@ export const CartProvider = ({ children }) => {
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
-export const useCart = () => {
-  const ctx = useContext(CartContext);
-  if (!ctx) {
-    throw new Error("useCart must be used within a CartProvider");
-  }
-  return ctx;
-};
 
+export default CartProvider;

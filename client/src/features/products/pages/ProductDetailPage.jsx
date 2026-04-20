@@ -1,8 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Loade from "../sheared/Loading/CircleLoading";
-import { useCart } from "../features/cart/CartContext.jsx";
+import Loade from "../../../sheared/Loading/CircleLoading.jsx";
+import { useCart } from "../../cart/customHook/useCart.jsx";
 
 export default function ProductDetailPage() {
   const { id } = useParams();

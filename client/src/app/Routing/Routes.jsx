@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CategoryPage from "../../pages/catepages.jsx";
-import { Dastehha } from "../../pages/Dastehbandi.jsx";
+import CategoryPage from "../../features/products/pages/catepages.jsx";
+import { Dastehha } from "../../features/dasteha/Dastehbandi.jsx";
 import Savecart from "../../app/Routing/protectingRouts.jsx";
 import { Homepage } from "../../features/home/pages/homepage.jsx";
 import Form from "../../features/login-sinup/pages/sinup.jsx";
 import Login from "../../features/login-sinup/pages/login.jsx";
-import ProductDetailPage from "../../pages/ProductDetailPage.jsx";
+import ProductDetailPage from "../../features/products/pages/ProductDetailPage.jsx";
 export const AppRoutes=()=>{
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
    return(

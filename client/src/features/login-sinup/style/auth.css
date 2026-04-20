@@ -6,10 +6,9 @@
     justify-content: center;
     height: 340px;
     width: 100%;
-    border: solid 1px black;
     border-radius:50px ;
     background: rgb(91, 209, 238);
-    box-shadow: 10px 10px 1300px 200px rgb(55, 190, 253);
+    box-shadow: 10px 10px 120px 10px rgb(104, 206, 253);
 }
 .input-auth{
     height: 50px;

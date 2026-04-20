@@ -1,10 +1,9 @@
-import { useCart } from "./CartContext.jsx";
+import { useCart } from "../customHook/useCart";
 
 const Cart = () => {
   const { items, totalItems, totalPrice, addToCart, removeFromCart, clearCart } =
     useCart();
 
-  console.log("Cart component rendered with items:", items);
 
   if (!items.length) {
     return (
