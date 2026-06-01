@@ -1,33 +1,37 @@
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Prudact from "../../products/components/prudact";
 import { Apicontext } from "../context/Apicontext";
 import Loade from "../../../sheared/Loading/CircleLoading";
 export const Homeslider=()=>{
+  const imgs=[
+    'slide-1.png',
+    'slide-2.png',
+    'slide-3.png',
+    'slide-4.png',
+    'slide-5.png',
+    'slide-6.png',
+  ]
+  const [count , setCount]=useState(0)
 
-    const {res1,loading1}=useContext(Apicontext)
-    const sliderRef = useRef(null);
-   
-    const prev = () => {
-        sliderRef.current?.scrollBy({ left: -300, behavior: 'smooth' });
-    };
+  useEffect(()=>{
 
-    const next = () => {
-        sliderRef.current?.scrollBy({ left: 300, behavior: 'smooth' });
-    }
+    const interval=  setInterval(() => {
+        setCount(prevcount=>{
+          if(prevcount==5){
+            return 0
+          }else{
+            return prevcount+1
+          }
+        })
+      },  3000);
+
+      
+      return ()=> clearInterval(interval)
+  } , [count])
+
     return(
-            <div className="container">
-              <div className="row">
-                <div className="prant-slide col-12 " >
-                  <p className="Market">هایپر مارکت</p>
-                  <button className="nav left d-none d-md-block" onClick={prev}>‹</button>
-                  <div className="  slider " ref={sliderRef}>
-                      {loading1?<Loade/>:res1.map((prudactdata) => (
-                        <Prudact key={prudactdata.id} data={prudactdata} />
-                      ))}
-                  </div>
-                  <button className="nav right d-none d-md-block" onClick={next}>›</button>
-                </div>
-              </div>
-            </div>
+        <sup className="mt-[110px] z-[-1] fixed  w-full overflow-x-auto left-[0%] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+          <img src={`${imgs[count]}`} className=" image-slide " alt="" />
+        </sup>
     )
 }

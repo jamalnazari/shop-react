@@ -1,0 +1,195 @@
+{
+  "products": [
+    {
+      "name": "laptop",
+      "price": 5678000,
+      "description": "rsk arg erogoagk oregkaegr;lagr oagj at   ",
+      "category": "laptop",
+      "image": "http://localhost:3001/laptop/laptop.png",
+      "id": "BVmzF5mpycM"
+    },
+    {
+      "name": "laptop",
+      "price": 5675687567,
+      "description": "cghjfkfdsfdgrt",
+      "category": "laptop",
+      "image": "http://localhost:3001/laptop/laptop5.png",
+      "id": "gFzh5oWzSGc"
+    },
+    {
+      "name": "jsrf",
+      "price": 3566500000,
+      "description": "rsk arg erogoagk oregkaegr;lagr oagj at   t ru rt yurtyer ",
+      "category": "laptop",
+      "image": "http://localhost:3001/laptop/laptop4.png",
+      "id": "SX7-p92cBnY"
+    },
+    {
+      "name": "iphone 17",
+      "price": 270000000,
+      "description": "آیفون 17 معمولی با 556 گیگ حافضه و رم 12",
+      "category": "mobile",
+      "image": "http://localhost:3001/mobile/iphone17.png",
+      "id": "0LHYVXEctsk"
+    },
+    {
+      "name": "pocox7",
+      "price": 34560000,
+      "description": "fjjdj uk li yt il rdsery  ;dt ",
+      "category": "mobile",
+      "image": "http://localhost:3001/mobile/pocox7.png",
+      "id": "kbxIh2iDRzc"
+    },
+    {
+      "name": "iphone 17pro",
+      "price": 4300000000,
+      "description": "آیفون 17 پرومکس با 256 گیگ حافظه و 8 گیگ رم",
+      "category": "mobile",
+      "image": "http://localhost:3001/mobile/iphone 17pro.png",
+      "id": "I9TnlF4E6aM"
+    },
+    {
+      "name": "iphone16",
+      "price": 240000000,
+      "description": "گوشی آیفون 16 معمولی با 128 گیگ حافظه و 4 رم",
+      "category": "mobile",
+      "image": "http://localhost:3001/mobile/iphone16.png",
+      "id": "HiOiD20qaSU"
+    },
+    {
+      "name": "Redmi not 14",
+      "price": 40200000,
+      "description": "گوشی شیایومی redmi not 14 با 256 گیگ حافظه و 4 گیگ رم",
+      "category": "mobile",
+      "image": "http://localhost:3001/mobile/Redmi not 14.png",
+      "id": "Nk9xauX7sxo"
+    },
+    {
+      "name": "S25 ultra",
+      "price": 253000000,
+      "description": "گوشی مدل سامسونگ S25 ultra ",
+      "category": "mobile",
+      "image": "http://localhost:3001/mobile/S25ultra.png",
+      "id": "YD80AfO84Xw"
+    },
+    {
+      "name": "a56",
+      "price": 45000000,
+      "description": "گوشی سامسونگ مدل A56 ",
+      "category": "mobile",
+      "image": "http://localhost:3001/mobile/sumsung A56.png",
+      "id": "uLNl5kIoyXk"
+    },
+    {
+      "name": "کتونی",
+      "price": 36400,
+      "description": "کتانی مخصوص دویدن مردانه سارزی مدل F.A.L.C.O.N_22",
+      "category": "poushak",
+      "image": "http://localhost:3001/poushak/katani.png",
+      "id": "fE7HOgX5lRw"
+    },
+    {
+      "name": "کیف پول",
+      "price": 452000,
+      "description": "کیف پول چرم مشهد مدل DHLL",
+      "category": "poushak",
+      "image": "http://localhost:3001/poushak/kifpool.png",
+      "id": "S4v52b5uCjI"
+    },
+    {
+      "name": "سوتین زنانه",
+      "price": 34000,
+      "description": "سوتین زنانه مدل UDEO-34I",
+      "category": "poushak",
+      "image": "http://localhost:3001/poushak/sutian.png",
+      "id": "t5rKSYk7gHI"
+    },
+    {
+      "name": "پیراهن مردانه ",
+      "price": 1970000,
+      "description": "پیراهن مردانه کشسان مدل JDKW-VFK45",
+      "category": "poushak",
+      "image": "http://localhost:3001/poushak/pirahan.png",
+      "id": "ZrJzIrGEDLk"
+    },
+    {
+      "name": "جوراب",
+      "price": 620000,
+      "description": "جوراب ساقبلند مردانه مدل KED-U993",
+      "category": "poushak",
+      "image": "http://localhost:3001/poushak/jurab.png",
+      "id": "G7uIOgqeVlI"
+    },
+    {
+      "name": "لپتاپ Levovo",
+      "price": 6200000,
+      "description": "لپتاپ برند لنوو با پردازنده 4 هسته و 2 گیگ گرافیک مجزا",
+      "category": "laptop",
+      "image": "http://localhost:3001/laptop/laptop3.png",
+      "id": "E197-bKOCnU"
+    },
+    {
+      "name": "superhp",
+      "price": 61930000000,
+      "description": "غول اچ پی با 32گیگ رم DDR5 و حافظه 2 ترابایت ssd",
+      "category": "laptop",
+      "image": "http://localhost:3001/laptop/superhp.png",
+      "id": "YivaiKS_suY"
+    },
+    {
+      "name": "خامه",
+      "price": 24000,
+      "description": " خامه صبحانه از برند صباح",
+      "category": "super",
+      "image": "http://localhost:3001/super/khameh.png",
+      "id": "393jbca_MQE"
+    },
+    {
+      "name": "مایع لباسشویی",
+      "price": 523000,
+      "description": "مایع لباسشویی برند سافتلن برای لباسهای پنبه ای",
+      "category": "super",
+      "image": "http://localhost:3001/super/saftlan.png",
+      "id": "FreDmVPmQNQ"
+    },
+    {
+      "name": "شامپو ",
+      "price": 53000,
+      "description": "شامپو بچه از برند گلرنگ",
+      "category": "super",
+      "image": "http://localhost:3001/super/shompo.png",
+      "id": "h8FcCeMMDLY"
+    },
+    {
+      "name": "سس",
+      "price": 83000,
+      "description": "سس تند کاله با درصد چربی پایین",
+      "category": "super",
+      "image": "http://localhost:3001/super/sos.png",
+      "id": "xUxTIPkCUSY"
+    },
+    {
+      "name": "کوکتل",
+      "price": 98098,
+      "description": "کوکتل دودی از برند کاله با 45 درصد گوشت گوساله",
+      "category": "super",
+      "image": "http://localhost:3001/super/susis.png",
+      "id": "nK8YQwckBro"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "phone": "09925770376"
+    },
+    {
+      "id": "2",
+      "phone": "09374839564"
+    },
+    {
+      "id": "3",
+      "phone": "09248736298"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

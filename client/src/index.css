@@ -150,11 +150,18 @@ body {
   width: 90px;
   text-align: end;
 }
+/* Chrome, Edge, Safari */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* روش اول: کاملاً حذفش کن */
+    /* یا */
+    width: 0;       /* روش دوم: عرض رو ببر صفر */
+    background: transparent;
+}
 .slider{
     display: flex;
     overflow-x: auto;
     background: rgb(241, 7, 7);
-    scrollbar-width: none;
+    scrollbar-width: none !important;
     border-radius: 10px;
     height: 100%;
     align-items: center;
@@ -217,26 +224,6 @@ body {
     font-size: small;
     font-weight: 300;
   }
-}
-.nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 10;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
 }
 .nav:hover {
     background: #4dabf7;
@@ -338,4 +325,38 @@ body {
   top: 30px;
   left: 300px;
   z-index: 1001;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+/* 
+@media (max-width:500px){
+  .responsiv-slids{
+    height: 150px !important;
+  }
+} */
+
+.image-slide{
+  width: 100%;
+  animation: s 3s linear infinite ;
+  min-height: 130px !important;
+}
+@keyframes s{
+  0%{
+    transform: translateX(-100%);
+  }
+  10%{
+    transform: translateX(0);
+  }
+  90%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+@media (min-width:1024px) {
+  .d-none{
+    display: none !important;
+  }
 }

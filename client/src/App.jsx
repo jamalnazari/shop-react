@@ -1,15 +1,15 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+import "./input.css"
+import "./output.css"
 import AppLayout from "./app/Layoute/AppLayoute.jsx";
 import { BrowserRouter as Router } from "react-router-dom";
-import CartProvider from "./features/cart/context/Cartprovider.jsx";
-
+import Cartprovider from "./features/cart/context/cartcontext.jsx";
 function App() {
   return (
     <Router>
-      <CartProvider>
+      <Cartprovider>
         <AppLayout />
-      </CartProvider>
+      </Cartprovider>
     </Router>
   );
 }

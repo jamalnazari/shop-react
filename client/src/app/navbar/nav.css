@@ -1,217 +1,32 @@
 
-
-.img {
-  width: 40px;
-  height: 100%;
-  object-fit: cover;      
-  border-radius: 50%;    
-}
-
-.nav-a{
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    direction: rtl;
-    background: rgb(255, 255, 255);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.096);
-}
-
-header{
-    min-height:15vh;
-}
-
-
-
-.serch-icon{
-    width: 30px;
-    padding-block: 3px;
-    height: 25px;
-    background: rgb(2, 255, 86);
-    font-size: xx-large;
-    border: 1px solid rgb(170, 166, 166);
-    border-radius: 4px;
-    color: rgb(255, 255, 255);
-    font-size: smaller;
-}
-.serch-icon span{
-    margin-right: 20px;
-}
-.serch-icon-bobile{
-    
-}
-/* .serchbox{
-    text-align: left !important;
-} */
-
-.login{
-    border: 2px solid black;
-    border-radius: 8px;
-    color: black;
-    padding: 4px;
-    background: rgb(230, 228, 227);
-    width: 60%;
-    font-size: x-small;
-}
-.login:hover{
-    color: black;
-}
-
-.cart{
-    font-size: x-large;
-    color: black;
-}
-.cart:hover{
-    color: black;
-}
-
-.nav-b{
-    width: 100%;
-    background: rgba(255, 253, 253, 0);
-    min-height: 70px;
-    position: fixed;
-    z-index: 100;
-    display: flex;
-    justify-content: space-around;
-    bottom: 20px;
-}
-.nav-b-child{
-    background: rgb(255, 255, 255);
-    width: 75%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 16px 21px 0px rgb(194, 191, 191);
-    border-radius: 10px;
-}
-.parent-cart{
-    height: 70%;
-}
-.parent-login{
-    height: 60%;
-}
-.dropdown {
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  overflow: hidden;
-  transition: max-height .4s ease, opacity .3s ease, transform .3s ease;
-}
-
-.menu-item.active .dropdown {
-  max-height: 500px;
-  opacity: 1;
-  transform: translateY(0);
-  width:fit-content;
-  background: white;
-  border-radius: 5px;
-  box-shadow:0px 1px 4px 0px ;
-}
-.dropdown li{
-    list-style: none;
-}
-.Dastehha{
-    background: rgb(198, 237, 255);
-    height: 100vh;
-    padding-top: 130px;
-    padding-bottom: 40px;
-}
-.child-dastehha{
-    max-height: 50px;
-    background: rgb(255, 254, 252);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius:20px ;
-    margin: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    scrollbar-width: none;
-    overflow-y: hidden;
-}.child-dastehha:hover{
-    box-shadow: 0px 3px 4px 0px rgba(98, 100, 98, 0.24);
-    transform: translateY(1px);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+.close{
+    transform: translateY(-40px);
+    transition: all .4s ease;
 }
 .open{
-    max-height: fit-content;
+    transform: translateY(0px);
+    transition: all .5s ease;
 }
-.Dastehha p{
-    color: blue;
-    width: 80%;
-    cursor: pointer;
+.open div {
+  position: relative;
+  display: inline-block; /* یا inline-flex */
+  padding-bottom: 4px; /* فاصله متن تا خط */
+  overflow: hidden;
 }
-.Dastehha a{
-    color: black;
-    margin: 2px;
-    width: 100%;
-}
-.Dastehha a:hover{
-    background: rgb(235, 255, 253);
-    transition: background 0.3s ease 
-}
-.pElem{
-    color: rgb(70, 68, 68);
-    cursor: pointer;
-    font-size: small;
-}
-.pElem:hover{
-    color: black;
-    transition: color 0.3s ease-in;
-}
-.dropdown Li a{
-    color: rgb(71, 70, 70);
-    font-size: x-small
-    
-}
-.dropdown Li a:hover{
-    color: black;
-}
-header{
-    min-height: 70px !important;
-}
-.nav-b-child div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.nav-b-child div .parent-icon{
-    height: 40px;
-    width: 40px;
-    border-radius: 10px;
-    font-size: large;
-}
-.nav-b-child div .parent-icon a{
-    color: rgb(253, 253, 253);
 
+.open div::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0; /* برای RTL از right استفاده کن */
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  transform: scaleX(0); /* شروع از صفر (دیده نشود) */
+  transform-origin: center; /* از راست شروع به باز شدن کند */
+  transition: transform 0.2s ease-in-out;
 }
-.bg-home{
-    background: rgb(240, 14, 228);
-}
-.bg-cart{
-    background: rgb(3, 255, 255);
-}
-.bg-dasteh{
-    background: rgb(243, 21, 21);
-}
-.bg-user{
-    background: rgb(5, 241, 5);
-}
-@media (max-width:768px){
-    .nav-a{
-        background: rgba(255, 253, 253, 0);
-        height: 60px;
-    }
-    .serch-icon{
-        margin: auto;
-        border: 3px solid rgb(219, 218, 218);
-        background: rgb(255, 255, 255);
-        border-radius: 5px;
-        opacity: 1;
-        width: 100%;
-        color: black;
-    }
-    header{
-        min-height: 40px !important;
-    }
+
+.open div:hover::after {
+  transform: scaleX(1); /* کامل باز شود */
 }

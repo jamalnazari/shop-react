@@ -1,9 +1,9 @@
 
-
-function Loade(){
-
-    return(
-        <div className="loade"></div>
+export default function CircleLoading(){
+     
+    return (
+        <div className="h-screen flex items-center justify-center">
+           <div className="loade"></div>
+        </div>
     )
 }
-export default Loade;

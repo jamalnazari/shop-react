@@ -1,15 +1,18 @@
-import { Homeslider } from "../components/homeSlider";
-import { Homevitreen1 } from "../components/homevitreen-a";
-import { Homevitreen2 } from "../components/homevitreen-b";
+
+import Home from "../components/Home";
 import Apiprovider from "../context/Apicontext";
+import { useContext } from "react";
+import { Cartcontext } from "../../cart/context/cartcontext";
 export const Homepage=()=>{
 
+
+    const {items}=useContext(Cartcontext)
+    console.log(items);
+    
     return (
-        <div  className=' shop text-end'>
+        <div  className=''>
             <Apiprovider>
-             <Homeslider/>
-             <Homevitreen1/>
-             <Homevitreen2/>
+               <Home/>
             </Apiprovider>
         </div>
   );

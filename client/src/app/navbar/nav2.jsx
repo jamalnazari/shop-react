@@ -8,37 +8,28 @@ import {faShoppingCart} from '@fortawesome/free-solid-svg-icons' //برای اس
 export const Navbar2 =()=>{
 
     return(
-      <div className='container-fluid nav-b  d-md-none'>
-         <div className='row nav-b-child'>   
-            <div className='col-3'>
-               <div className='parent-icon bg-user'>
+   
+         <div className='w-full bg-slate-100 max-lg:flex  hidden fixed bottom-0 text-slate-600'>
+            <div className='w-[25%] text-center my-2 text-2xl'>
                <Link>
                   <FontAwesomeIcon icon={faCircleUser}/>
                </Link>
-                </div>
-            </div>
-            <div className="home col-3">
-               <div className='parent-icon bg-home'>
-                <Link to='/shop-react' className="">
-                  <FontAwesomeIcon icon={faHome}/>
-                </Link>
-               </div>
-            </div>                
-            <div className='col-3'>
-               <div className='parent-icon bg-dasteh'>
+            </div>            
+            <div className='w-[25%] text-center my-2 text-2xl'>
                <Link to='/Dastehha'>
                   <FontAwesomeIcon icon={faTableCells}/>
                </Link>
-                </div>
             </div>
-            <div className='col-3'>
-               <div className='parent-icon bg-cart'>
+            <div className='w-[25%] text-center my-2 text-2xl'>
                <Link to={'/shop-react/cart'}>
                   <FontAwesomeIcon icon={faShoppingCart}/>
                </Link>
-                </div>
+            </div>
+            <div className='w-[25%] text-center my-2 text-2xl'>
+                <Link to='/shop-react' className="">
+                  <FontAwesomeIcon icon={faHome}/>
+                </Link>
             </div>
          </div>
-      </div>
     )
 }
