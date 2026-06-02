@@ -11,7 +11,7 @@ export const Navbar2 =()=>{
    
          <div className='w-full bg-slate-100 max-lg:flex  hidden fixed bottom-0 text-slate-600'>
             <div className='w-[25%] text-center my-2 text-2xl'>
-               <Link>
+               <Link to={"/shop-react/login"}>
                   <FontAwesomeIcon icon={faCircleUser}/>
                </Link>
             </div>            

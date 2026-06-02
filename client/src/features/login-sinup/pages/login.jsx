@@ -1,58 +1,74 @@
-import { useState } from "react"
-import { useNavigate,Link} from "react-router-dom"
-function Login(){
-    const [email, setemail]=useState("")
-    const [password, setpassword]=useState("")
-    const navigat=useNavigate()
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
-    const handlesubmit=(e)=>{
-        e.preventDefault()
-        const user=localStorage.getItem("user")
-        const i=JSON.parse(user)
-        if(i.email==email &&i.password==password) {
-            navigat('/shop-react/')
-        }
-        else{
-            console.log("no");
-            
-        }
-        
-    }
-    
-    return(
-        <div className="container-fluid">
-            <div className="row w-100 vh d-flex justify-content-center">
-                <div className="col-12 col-sm-10 col-md-7">
-                    <form className="form-auth" onSubmit={handlesubmit}>
-                        <div className="div1">
-                            <p className="p1">ورود</p>
-                            <p className="p2">حسابی‌ندارید؟<Link to="/shop-react/sinup" >ثبت‌نام</Link></p>
-                        </div>
-                        <div className="div2">
-                            <input 
-                            className=" input-auth" 
-                            type="email" 
-                            value={email} 
-                            onChange={(e)=>setemail(e.target.value)}
-                            placeholder="ایمیل"
-                            />
-                            
-                            <input 
-                            className=" input-auth" 
-                            type="password" 
-                            value={password} 
-                            onChange={(e)=>setpassword(e.target.value)}
-                            placeholder="رمزعبور"
-                            />
-                            <button 
-                            className="w-50 button-auth">
-                            ورود 
-                            </button>
-                        </div>
-                    </form> 
-                </div>
-            </div>
+function Login() {
+  const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // منطق ارسال اطلاعات به سرور
+    console.log("ورود با:", inputValue);
+    // بعد از موفقیت می‌توانید هدایت کنید:
+    // navigate("/");
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="w-full w-full lg:w-[500px] bg-white rounded-xl shadow-lg p-6 md:p-8">
+        {/* لوگو */}
+        <div className="flex justify-center mb-6">
+          <img
+            src="./digikala-logo.svg"
+            alt="دیجی‌کالا"
+            className="h-8"
+          />
         </div>
-    )
+
+        {/* عنوان */}
+        <h2 className="text-end text-xl md:text-2xl font-bold text-gray-800 mb-2">
+          ورود یا ثبت‌نام در دیجی‌کالا
+        </h2>
+        <p className="text-end text-sm text-gray-500 mb-6">
+          لطفا شماره موبایل یا ایمیل خود را وارد کنید
+        </p>
+
+        {/* فرم */}
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="شماره موبایل یا پست الکترونیک"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition text-right"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition duration-200 text-sm md:text-base"
+          >
+            ورود به دیجی‌کالا
+          </button>
+        </form>
+
+        {/* شرایط و قوانین */}
+        <p className="text-center text-xs text-gray-400 mt-6">
+          ورود شما به معنای پذیرش{" "}
+          <a href="#" className="text-red-600 hover:underline">
+            شرایط دیجی‌کالا
+          </a>{" "}
+          و{" "}
+          <a href="#" className="text-red-600 hover:underline">
+            قوانین حریم خصوصی
+          </a>{" "}
+          است
+        </p>
+      </div>
+    </div>
+  );
 }
+
 export default Login;

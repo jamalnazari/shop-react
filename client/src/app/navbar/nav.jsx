@@ -38,7 +38,7 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="grow">
-              <Link to={"/shop-react/sinup"}>
+              <Link to={"/shop-react/login"}>
                 <button className="w-full border rounded-[7px] p-2 text-xs">ورود | ثبت‌نام</button>
               </Link>
             </div>
