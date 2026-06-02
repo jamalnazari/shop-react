@@ -1,5 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import Prudact from "../../products/components/prudact";
+import {useEffect, useState } from "react";
 import { Apicontext } from "../context/Apicontext";
 import Loade from "../../../sheared/Loading/CircleLoading";
 export const Homeslider=()=>{
