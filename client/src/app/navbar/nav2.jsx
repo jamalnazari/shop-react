@@ -16,7 +16,7 @@ export const Navbar2 =()=>{
                </Link>
             </div>            
             <div className='w-[25%] text-center my-2 text-2xl'>
-               <Link to='/Dastehha'>
+               <Link to='/shop-react/categories'>
                   <FontAwesomeIcon icon={faTableCells}/>
                </Link>
             </div>
@@ -26,7 +26,7 @@ export const Navbar2 =()=>{
                </Link>
             </div>
             <div className='w-[25%] text-center my-2 text-2xl'>
-                <Link to='/shop-react' className="">
+                <Link to='/shop-react/' className="">
                   <FontAwesomeIcon icon={faHome}/>
                 </Link>
             </div>

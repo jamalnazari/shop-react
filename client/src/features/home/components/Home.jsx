@@ -7,17 +7,16 @@ import { Apicontext } from "../context/Apicontext"
 import CircleLoading from "../../../sheared/Loading/CircleLoading";
 export default function Home(){
     
-    const {res1,loading1}=useContext(Apicontext)
-    console.log(res1);
+    const {Products,loading1}=useContext(Apicontext)
 
     
     return(
         <>
             { !loading1? <div className="w-full md:mt-[300px] lg:mt-[350px] mt-[250px] bg-white   text-center pt-[20px] md:pl-[6%]">
                 <Homeslider/>
-                <SliderProducts data={res1}/>
+                <SliderProducts data={Products}/>
                 <Boyasdasteh/>
-                <BoxProducts data={res1}/>
+                <BoxProducts data={Products}/>
             </div> : <CircleLoading/>}
         </>
     )

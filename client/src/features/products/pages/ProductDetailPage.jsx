@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Cartcontext } from "../../cart/context/cartcontext";
+import { CartContext } from "../../cart/context/cartcontext";
 import { useContext } from "react";
 
 const ProductDetailPage = () => {
-  const { addTocart } = useContext(Cartcontext);
+  const { addToCart } = useContext(CartContext);
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -70,7 +70,7 @@ const ProductDetailPage = () => {
             </div>
 
             <button
-              onClick={() => addTocart(product)}
+              onClick={() => addToCart(product)}
               className="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 shadow-md"
             >
               افزودن به سبد خرید

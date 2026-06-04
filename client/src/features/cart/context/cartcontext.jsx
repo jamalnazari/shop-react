@@ -1,43 +1,74 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import {
+  calculateCartTotal,
+  loadCartFromStorage,
+  saveCartToStorage,
+} from "../../../utils/cart";
 
- export const Cartcontext=createContext(null)
+export const CartContext = createContext(null);
 
- function Cartprovider({children}){
+export function CartProvider({ children }) {
+  const [items, setItems] = useState([]);
 
-    const [items ,setitems]=useState([])
+  useEffect(() => {
+    setItems(loadCartFromStorage());
+  }, []);
 
+  const addToCart = useCallback((product) => {
+    setItems((prev) => {
+      const exists = prev.some((item) => item.id === product.id);
+      if (exists) return prev;
 
-    useEffect(()=>{
-        const i = localStorage.getItem('items')
-        i?setitems(JSON.parse(i)):[]
-    } , [])
-    const addTocart=(product)=>{
+      const nextItems = [...prev, product];
+      saveCartToStorage(nextItems);
+      return nextItems;
+    });
+  }, []);
 
-       setitems(prev =>{
-         return [...prev , product]
-       })
-       const bool=items.find(p => p.id ==product.id)
-       if(!bool){
+  const removeFromCart = useCallback((product) => {
+    setItems((prev) => {
+      const nextItems = prev.filter((item) => item.id !== product.id);
+      saveCartToStorage(nextItems);
+      return nextItems;
+    });
+  }, []);
 
-         localStorage.setItem('items' , JSON.stringify([...items ,product]))
-       }
-       
-    }
+  const clearCart = useCallback(() => {
+    setItems([]);
+    saveCartToStorage([]);
+  }, []);
 
-    const removeitem=(product)=>{
-          const i=localStorage.getItem('items')
-          const p=JSON.parse(i)
+  const total = useMemo(() => calculateCartTotal(items), [items]);
 
-          const newlistproduct=items.filter((p)=> p.id!=product.id)
+  const value = useMemo(
+    () => ({
+      items,
+      addToCart,
+      removeFromCart,
+      clearCart,
+      total,
+    }),
+    [items, addToCart, removeFromCart, clearCart, total]
+  );
 
-          setitems([...newlistproduct])
-          localStorage.setItem('items' , JSON.stringify(newlistproduct))
-    }
+  return (
+    <CartContext.Provider value={value}>{children}</CartContext.Provider>
+  );
+}
 
-    return (
-        <Cartcontext.Provider value={{items , addTocart , removeitem}}>
-            {children}
-        </Cartcontext.Provider>
-    )
- }
- export default Cartprovider
+export function useCart() {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error("useCart must be used within CartProvider");
+  }
+  return context;
+}
+
+export default CartProvider;

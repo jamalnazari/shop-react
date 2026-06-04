@@ -1,10 +1,8 @@
 
-import { Cartcontext } from "../context/cartcontext";
+import { CartContext } from "../context/cartcontext";
 import { useContext } from "react";
 const Cart = () => {
-  const {items , removeitem}=useContext(Cartcontext)
-
-  console.log("this is productscart" , items);
+  const {items , removeFromCart}=useContext(CartContext)
 
   return(
    <div className="min-h-screen bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
@@ -38,7 +36,7 @@ const Cart = () => {
                 {product.price?.toLocaleString()} تومان
               </span>
               <button
-                onClick={() => removeitem(product)}
+                onClick={() => removeFromCart(product)}
                 className="text-red-500 hover:text-red-700 transition text-sm font-medium"
               >
                 ❌ حذف

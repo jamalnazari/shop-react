@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-
+import { useAuth } from "../../../context/AuthContext";
 function Login() {
+  const {login}=useAuth()
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // منطق ارسال اطلاعات به سرور
-    console.log("ورود با:", inputValue);
-    // بعد از موفقیت می‌توانید هدایت کنید:
-    // navigate("/");
+    login(inputValue)
+    navigate('/shop-react/')
+    setInputValue("")
   };
 
   return (

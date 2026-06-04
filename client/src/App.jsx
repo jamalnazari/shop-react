@@ -1,15 +1,18 @@
 import "./index.css";
 import "./input.css"
 import "./output.css"
-import AppLayout from "./app/Layoute/AppLayoute.jsx";
+import AppLayout from "./app/layout/AppLayout.jsx";
 import { BrowserRouter as Router } from "react-router-dom";
 import Cartprovider from "./features/cart/context/cartcontext.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 function App() {
   return (
     <Router>
-      <Cartprovider>
-        <AppLayout />
-      </Cartprovider>
+      <AuthProvider>
+        <Cartprovider>
+          <AppLayout />
+        </Cartprovider>
+      </AuthProvider>
     </Router>
   );
 }

@@ -1,28 +1,22 @@
 import axios from "axios";
 import { useState,  createContext, useEffect } from "react";
-
+import { productService } from "../../../api/productService";
+import { data } from "react-router-dom";
 export const Apicontext = createContext(null);
 
 
 const Apiprovider = ({ children }) => {
-  const [res1, setres1] = useState([]);
+  const [Products, setProducts] = useState([]);
   const [loading1 , setloading1]=useState(true)
  useEffect(()=>{
-    const asynres = async () => {
+    const asynres = () => {
       
       try{
-        const promise= axios.get('http://localhost:3001/products')  
-
-
-        const resp1= await promise
-
-
-        console.log(resp1);
-
-
-        setres1(resp1.data)
+        productService.getAll()  
+        .then(data =>setProducts(data))
+        
  
-        if(res1){
+        if(Products){
           setloading1(false)
         }
         
@@ -39,7 +33,7 @@ const Apiprovider = ({ children }) => {
   
 
   return (
-    <Apicontext.Provider value={{ res1,loading1 }}>
+    <Apicontext.Provider value={{ Products,loading1 }}>
       {children}
     </Apicontext.Provider>
   );
