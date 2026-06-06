@@ -8,23 +8,31 @@ export const Apicontext = createContext(null);
 const Apiprovider = ({ children }) => {
   const [Products, setProducts] = useState([]);
   const [loading1 , setloading1]=useState(true)
+  const [error , seterror]=useState("")
  useEffect(()=>{
     const asynres = () => {
-      
-      try{
         productService.getAll()  
-        .then(data =>setProducts(data))
-        
- 
-        if(Products){
+        .then(data =>{
+          setProducts(data) 
+          console.log(data)
+          if(Products){
           setloading1(false)
         }
         
-      }
-      catch(e){
-        console.log(e);
+      }).catch(e =>{
+         console.log("THIS ERROR IS IN THE APICONTEXT");
+         setloading1(false)
+         seterror("مشکل در اتصال به اینترنت")
+         
+      })
         
-      }
+        
+ 
+        
+        
+        
+        
+      
     }
       asynres();
  } , [])
@@ -33,7 +41,7 @@ const Apiprovider = ({ children }) => {
   
 
   return (
-    <Apicontext.Provider value={{ Products,loading1 }}>
+    <Apicontext.Provider value={{ Products,loading1,error }}>
       {children}
     </Apicontext.Provider>
   );

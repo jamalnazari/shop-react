@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { productService } from "../../../api/productService";
 export default function ProductUi() {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({
@@ -29,7 +29,7 @@ export default function ProductUi() {
 
 
     // اضافه کردن محصول جدید
-    const addProduct = async (e) => {
+    const addProduct =  (e) => {
         e.preventDefault();  // جلوگیری از رفرش صفحه
         
         // اعتبارسنجی
@@ -41,7 +41,7 @@ export default function ProductUi() {
         try {
             
             // ارسال به سرور
-            const res = await axios.post('http://localhost:3001/products', {
+            productService.create({
                 name: newProduct.name,
                 price: Number(newProduct.price),
                 description: newProduct.description,
