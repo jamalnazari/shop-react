@@ -8,8 +8,8 @@ export const ROUTES = {
   CATEGORY: (slug) => `${BASE_PATH}/category/${slug}`,
   PRODUCT: (id) => `${BASE_PATH}/product/${id}`,
   ADMIN: `${BASE_PATH}/admin`,
-  ADMIN_PRODUCTS: `${BASE_PATH}/admin/products`,
-  ADMIN_USERS: `${BASE_PATH}/admin/users`,
+  ADMIN_PRODUCTS: `${BASE_PATH}/Admin/products`,
+  ADMIN_USERS: `${BASE_PATH}/Admin/users`,
 };
 
 export const HIDE_NAV_ROUTES = [

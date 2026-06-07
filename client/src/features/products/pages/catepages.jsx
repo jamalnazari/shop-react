@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Loade from "../../../sheared/Loading/CircleLoading";
+import CircleLoading from "../../../shared/Loading/CircleLoading";
 
 export default function CategoryPage() {
   const { slug } = useParams();
@@ -37,7 +37,7 @@ export default function CategoryPage() {
   if (loading) {
     return (
       <div className="container" style={{ paddingTop: "100px" }}>
-        <Loade />
+        <CircleLoading />
       </div>
     );
   }

@@ -1,6 +1,5 @@
 import {useEffect, useState } from "react";
 import { Apicontext } from "../context/Apicontext";
-import Loade from "../../../sheared/Loading/CircleLoading";
 export const Homeslider=()=>{
   const imgs=[
     'slide-1.png',

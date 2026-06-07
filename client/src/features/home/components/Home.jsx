@@ -4,7 +4,6 @@ import BoxProducts from "./BoxProducts";
 import { Homeslider } from "./homeSlider";
 import { useContext } from "react"
 import { Apicontext } from "../context/Apicontext"
-import CircleLoading from "../../../sheared/Loading/CircleLoading";
 import AsyncState from "../../../shared/AsyncState";
 export default function Home(){
     

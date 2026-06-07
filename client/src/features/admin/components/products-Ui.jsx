@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { productService } from "../../../api/productService";
+import { data } from "react-router-dom";
 export default function ProductUi() {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({
@@ -13,8 +14,8 @@ export default function ProductUi() {
     
     useEffect(() => {
         const getProducts = async () => {
-            const res = await axios.get('http://localhost:3001/products');
-            setProducts(res.data);
+            const res = await productService.getAll();
+           setProducts([...res]) 
         };
         getProducts();
     }, []);
@@ -38,7 +39,7 @@ export default function ProductUi() {
             return;
         }
 
-        try {
+        
             
             // ارسال به سرور
             productService.create({
@@ -46,25 +47,19 @@ export default function ProductUi() {
                 price: Number(newProduct.price),
                 description: newProduct.description,
                 category:newProduct.category,
-                image: `http://localhost:3001/${newProduct.category}/${newProduct.image}.png`
-            });
+                image: `${import.meta.env.VITE_API_URL}/${newProduct.category}/${newProduct.image}.png`
+            }).then(data=> setProducts([...products, data]))
             
-            // اضافه کردن محصول جدید به لیست
-            setProducts([...products, res.data]);
-            // خالی کردن فرم
             setNewProduct({ name: "", price: "", description: "", image: "" , category:""});
             
             alert("محصول با موفقیت اضافه شد");
-        } catch (error) {
-            console.error("خطا در اضافه کردن محصول:", error);
-            alert("خطا در اضافه کردن محصول");
-        }
+        
     };
 
     // حذف محصول
     const deleteProduct = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/products/${id}`);
+            await productService.delete(id);
             setProducts(products.filter(product => product.id !== id));
         } catch (error) {
             console.log(error);

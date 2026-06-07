@@ -167,6 +167,14 @@
       "category": "super",
       "image": "http://localhost:3001/super/susis.png",
       "id": "nK8YQwckBro"
+    },
+    {
+      "name": "اتکلن",
+      "price": 245000,
+      "description": " اتکلن برند LFG با ماندگاری بالا",
+      "category": "cleener",
+      "image": "http://localhost:3001/cleener/atr.png",
+      "id": "cPPlbhiq9Ts"
     }
   ],
   "users": [
