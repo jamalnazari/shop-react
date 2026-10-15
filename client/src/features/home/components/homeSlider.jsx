@@ -21,10 +21,16 @@ export const Homeslider = () => {
   }, []);
 
   return (
-    <div className="mt-[110px] z-[-1] fixed w-full overflow-x-auto left-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+    <div className="relative w-full overflow-hidden mb-4">
       <img
         src={IMGS[count]}
-        className="image-slide w-full object-cover"
+        onError={(e) => {
+          if (!e.currentTarget.dataset.retried) {
+            e.currentTarget.dataset.retried = "true";
+            e.currentTarget.src = `./slide-${count + 1}.png`;
+          }
+        }}
+        className="w-full h-auto max-h-[400px] object-cover transition-all duration-500"
         alt={`اسلاید ${count + 1}`}
       />
     </div>
