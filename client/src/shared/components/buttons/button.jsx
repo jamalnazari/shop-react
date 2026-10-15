@@ -20,25 +20,25 @@ const variants = {
   dark: "bg-gray-900 text-white hover:bg-gray-800",
   outline: "border border-blue-600 text-blue-600 hover:bg-blue-50",
   ghost: "bg-transparent text-blue-600 hover:bg-blue-50",
+  outline_gray: "border border-gray-300 text-gray-700 hover:bg-gray-50",
+  none: "",
 };
 
 const sizes = {
   sm: "px-3 py-1.5 text-sm",
-
   md: "px-4 py-2 text-base",
-
   lg: "px-6 py-3 text-lg",
+  none: "",
 };
 
 export default function Button({
   variant = "primary",
   size = "md",
   children,
-  className="",
-  type="button",
+  className = "",
+  type = "button",
   ...props 
 }) {
-
   const selectedVariant =
     variants[variant] ?? variants.primary;
 

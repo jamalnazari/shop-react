@@ -8,6 +8,7 @@ import {
   faShieldHalved,
 } from "@fortawesome/free-solid-svg-icons";
 import { ROUTES } from "../../constants/routes";
+import Button from "../../shared/components/buttons/button";
 
 // ویژگی‌های فروشگاه
 const FEATURES = [
@@ -40,14 +41,16 @@ export const Footer = () => {
             alt="دیجی‌کالا"
             className="h-auto w-[130px] md:w-[170px]"
           />
-          <button
+          <Button
             type="button"
+            variant="none"
+            size="sm"
             onClick={scrollToTop}
-            className="flex shrink-0 items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-xs text-slate-600 transition-colors duration-200 hover:bg-slate-50"
+            className="flex shrink-0 items-center gap-2 rounded-lg border border-slate-300 bg-white text-xs text-slate-600 transition-colors duration-200 hover:bg-slate-50"
           >
             رفتن به بالا
             <FontAwesomeIcon icon={faAngleUp} />
-          </button>
+          </Button>
         </div>
 
         {/* اطلاعات تماس */}
