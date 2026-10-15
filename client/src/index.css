@@ -336,25 +336,6 @@ body {
   }
 } */
 
-.image-slide{
-  width: 100%;
-  animation: s 3s linear infinite ;
-  min-height: 130px !important;
-}
-@keyframes s{
-  0%{
-    transform: translateX(-100%);
-  }
-  10%{
-    transform: translateX(0);
-  }
-  90%{
-    transform: translateX(0);
-  }
-  100%{
-    transform: translateX(100%);
-  }
-}
 @media (min-width:1024px) {
   .d-none{
     display: none !important;
