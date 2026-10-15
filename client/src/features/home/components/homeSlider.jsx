@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 export const Homeslider = () => {
-  const imgs = [
-    'slide-1.png',
-    'slide-2.png',
-    'slide-3.png',
-    'slide-4.png',
-    'slide-5.png',
-    'slide-6.png',
-  ];
+ const imgs = [
+  `${import.meta.env.BASE_URL}slide-1.png`,
+  `${import.meta.env.BASE_URL}slide-2.png`,
+  `${import.meta.env.BASE_URL}slide-3.png`,
+  `${import.meta.env.BASE_URL}slide-4.png`,
+  `${import.meta.env.BASE_URL}slide-5.png`,
+  `${import.meta.env.BASE_URL}slide-6.png`,
+];
   const [count, setCount] = useState(0);
 
   useEffect(() => {
