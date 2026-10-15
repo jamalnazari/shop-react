@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+input {
+  color: #0f172a;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}

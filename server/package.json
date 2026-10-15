@@ -1,19 +1,20 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.py",
   "scripts": {
-      "start": "json-server db.json --port 3001 --static ./images"
+    "start": "python3 main.py",
+    "dev": "python3 -m uvicorn main:app --host 0.0.0.0 --port 3001 --reload",
+    "fastapi": "python3 main.py",
+    "json-server": "json-server db.json --port 3001 --static ./images"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "FastAPI backend for Shop React",
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
-    "json-server": "^1.0.0-beta.15",
-    "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "json-server": "^1.0.0-beta.15"
   }
 }
