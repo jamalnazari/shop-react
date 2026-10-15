@@ -21,7 +21,6 @@ export default function Home() {
         <SliderProducts data={products} />
         <Boyasdasteh />
         <BoxProducts data={products} />
-        <Input variant={'waite'} className={'shadow'} id={'hk9'}  />
       </> })}
     </div>
   );
