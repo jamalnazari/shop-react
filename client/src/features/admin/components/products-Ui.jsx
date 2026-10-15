@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { productService } from "../../../api/productService";
 import Button from "../../../shared/components/buttons/button";
+import Input from "../../../shared/components/input";
 export default function ProductUi() {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({
@@ -71,44 +72,44 @@ export default function ProductUi() {
             <form onSubmit={addProduct} className="flex flex-col gap-3 mb-8 p-4 border rounded-lg">
                 <h2 className="text-xl font-bold">➕ افزودن محصول جدید</h2>
                 
-                <input 
+                <Input 
                     type="text"
                     placeholder="نام محصول"
                     onChange={handleChange}
                     value={newProduct.name}
                     name="name"
-                    className="border p-2 rounded"
+                    className="p-2 rounded"
                 />
 
-                <input 
+                <Input 
                     type="number"
                     placeholder="قیمت (تومان)"
                     onChange={handleChange}
                     value={newProduct.price}
                     name="price"
-                    className="border p-2 rounded"
+                    className="p-2 rounded"
                 />
-                <input 
+                <Input 
                     type="text"
                     placeholder="توضیحات محصول"
                     onChange={handleChange}
                     value={newProduct.description}
                     name="description"
-                    className="border p-2 rounded"
+                    className="p-2 rounded"
                 />
-                <input 
+                <Input 
                     type="text"
                     placeholder="دسته"
                     onChange={handleChange}
                     value={newProduct.category}
                     name="category"
-                    className="border p-2 rounded"
+                    className="p-2 rounded"
                 />
 
-                <input 
+                <Input 
                     type="text"
                     onChange={handleChange}
-                    className="border p-2 rounded"
+                    className="p-2 rounded"
                     placeholder="تصویر محصول"
                     value={newProduct.image}
                     name="image"

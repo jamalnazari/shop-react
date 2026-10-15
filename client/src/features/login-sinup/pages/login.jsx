@@ -4,6 +4,7 @@ import { useAuth } from "../../../context/AuthContext";
 import { ROUTES } from "../../../constants/routes";
 import { validateLoginInput } from "../utils/loginValidator";
 import Button from "../../../shared/components/buttons/button";
+import Input from "../../../shared/components/input";
 
 function Login() {
   const { login } = useAuth();
@@ -65,12 +66,13 @@ function Login() {
         {/* فرم */}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <input
+            <Input
+              variant="default"
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="شماره موبایل یا پست الکترونیک"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition text-right"
+              className="w-full px-4 py-3 rounded-lg text-right"
               disabled={isLoading}
               required
             />

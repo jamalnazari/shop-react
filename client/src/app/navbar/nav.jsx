@@ -5,6 +5,7 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 import "./nav.css";
 import React , { useEffect, useState } from "react";
 import Button from "../../shared/components/buttons/button";
+import Input from "../../shared/components/input";
 
 const Navbar = () => {
 
@@ -49,7 +50,12 @@ const Navbar = () => {
           <div className="flex absolute right-0 ">
               <div className="flex p-2 bg-slate-100 mr-2 z-[100] w-[500px] rounded-[19px] ">
                 <div className="w-[90%] bg-transparent">
-                  <input className="bg-transparent h-full text-end text-xs w-full" type="text" placeholder="جستجو" />
+                  <Input
+                    variant="transparent"
+                    className="h-full text-end text-xs w-full"
+                    type="text"
+                    placeholder="جستجو"
+                  />
                 </div>
                 <div className="text-center grow">
                   <FontAwesomeIcon icon={faSearch} />
