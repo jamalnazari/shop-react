@@ -2,22 +2,27 @@ import SliderProducts from "./slider-products";
 import Boyasdasteh from "./boyasdasteh";
 import BoxProducts from "./BoxProducts";
 import { Homeslider } from "./homeSlider";
-import { useContext } from "react"
-import { Apicontext } from "../context/Apicontext"
+import { useProducts } from "../../../context/ProductsContext";
 import AsyncState from "../../../shared/AsyncState";
-export default function Home(){
-    
-    const {Products}=useContext(Apicontext)
+import Input from "../../../shared/components/input";
+export default function Home() {
 
-    
-    return(
-        
-            <div className="w-full md:mt-[300px] lg:mt-[350px] mt-[250px] bg-white   text-center pt-[20px] md:pl-[6%]">
-                <Homeslider/>
-                <SliderProducts data={Products}/>
-                <Boyasdasteh/>
-                <BoxProducts data={Products}/>
-            </div>
-        
-    )
+  const { products, loading, error } = useProducts();
+
+     const handlesave=()=>{
+ 
+     console.log('ذخیره شد');
+   }
+     
+  return (
+    <div className="w-full md:mt-[300px] lg:mt-[350px] mt-[250px] bg-white   text-center pt-[20px] md:pl-[6%]">
+      <Homeslider />
+      {AsyncState({ loading, error, children: <>
+        <SliderProducts data={products} />
+        <Boyasdasteh />
+        <BoxProducts data={products} />
+        <Input variant={'waite'} className={'shadow'} id={'hk9'}  />
+      </> })}
+    </div>
+  );
 }

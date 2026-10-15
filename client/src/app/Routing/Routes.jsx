@@ -6,29 +6,31 @@ import { Homepage } from "../../features/home/pages/homepage.jsx";
 import Login from "../../features/login-sinup/pages/login.jsx";
 import ProductDetailPage from "../../features/products/pages/ProductDetailPage.jsx";
 import Admin from "../../features/admin/app/admin.jsx";
+import ProductUi from "../../features/admin/components/products-Ui";
+import UsersUi from "../../features/admin/components/users-ui";
 import ProtectedRoute from "./ProtectedRoute.jsx";
-import { ROUTES } from "../../constants/routes.js";
+import AppLayout from "../layout/AppLayout.jsx";
+import { BASE_PATH, ROUTES } from "../../constants/routes.js";
 
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path={ROUTES.HOME} element={<Homepage />} />
-      <Route path={ROUTES.LOGIN} element={<Login />} />
-      <Route path={ROUTES.CART} element={<CartPage />} />
-      <Route path={`${ROUTES.CATEGORY(":slug")}`} element={<CategoryPage />} />
-      <Route
-        path={`${ROUTES.PRODUCT(":id")}`}
-        element={<ProductDetailPage />}
-      />
-      <Route path={ROUTES.CATEGORIES} element={<Dastehha />} />
-      <Route
-        path={`${ROUTES.ADMIN}/*`}
-        element={
-          <ProtectedRoute>
-            <Admin />
-          </ProtectedRoute>
-        }
-      />
+      <Route path={BASE_PATH} element={<AppLayout />}>
+        <Route index element={<Homepage />} />
+        <Route path="login" element={<Login />} />
+        <Route path="cart" element={<CartPage />} />
+        <Route path="category/:slug" element={<CategoryPage />} />
+        <Route path="product/:id" element={<ProductDetailPage />} />
+        <Route path="categories" element={<Dastehha />} />
+        <Route path="admin" element={<ProtectedRoute />}>
+          <Route element={<Admin />}>
+            <Route index element={<Navigate to="products" replace />} />
+            <Route path="products" element={<ProductUi />} />
+            <Route path="users" element={<UsersUi />} />
+          </Route>
+        </Route>
+        <Route path="*" element={<Navigate to={ROUTES.HOME} replace />} />
+      </Route>
       <Route path="*" element={<Navigate to={ROUTES.HOME} replace />} />
     </Routes>
   );

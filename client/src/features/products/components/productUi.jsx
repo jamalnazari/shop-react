@@ -1,10 +1,17 @@
-import { CartContext } from "../../cart/context/cartcontext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../cart/context/cartcontext";
+import { ROUTES } from "../../../constants/routes";
+
 export default function ProductUi({data}){
-  const { addToCart } = useContext(CartContext);
+  const { items, addToCart } = useContext(CartContext);
+  // آیا این محصول از قبل در سبد خرید هست؟
+  const isInCart = items.some((item) => item.id === data.id);
 
     return(
-        <div className="min-h-screen bg-gray-100 pt-20 md:pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div dir="rtl" className="min-h-screen bg-gray-100 pt-20 md:pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
           {/* سمت راست - تصویر محصول */}
@@ -32,12 +39,28 @@ export default function ProductUi({data}){
               </div>
             </div>
 
-            <button
-              onClick={() => addToCart(data)}
-              className="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 shadow-md"
-            >
-              افزودن به سبد خرید
-            </button>
+            {/* اگر محصول در سبد است پیام و لینک سبد را نشان بده، وگرنه دکمه‌ی افزودن را */}
+            {isInCart ? (
+              <div className="mt-8 flex flex-col gap-3">
+                <p className="flex items-center justify-center gap-2 rounded-xl bg-green-50 py-3 font-medium text-green-700">
+                  <FontAwesomeIcon icon={faCircleCheck} />
+                  این کالا در سبد خرید شماست
+                </p>
+                <Link
+                  to={ROUTES.CART}
+                  className="w-full rounded-xl border-2 border-red-600 py-3 text-center font-bold text-red-600 transition-colors duration-200 hover:bg-red-50 hover:text-red-700"
+                >
+                  مشاهده‌ی سبد خرید
+                </Link>
+              </div>
+            ) : (
+              <button
+                onClick={() => addToCart(data)}
+                className="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 shadow-md"
+              >
+                افزودن به سبد خرید
+              </button>
+            )}
           </div>
         </div>
       </div>

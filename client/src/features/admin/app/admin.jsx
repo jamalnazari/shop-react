@@ -1,19 +1,13 @@
-import Asid from "../components/asid"
-import ProductUi from "../components/products-Ui";
-import UsersUi from "../components/users-ui";
-import { Routes , Route } from "react-router-dom";
-
+import { Outlet } from "react-router-dom";
+import Asid from "../components/asid";
 
 export default function Admin() {
-    
-    return(
-        <div>
-            <Asid/>
-
-            <Routes>
-                <Route path="products" element={<ProductUi/>}/>
-                <Route path="users" element={<UsersUi/>}/>
-            </Routes>
-        </div>
-    )
+  return (
+    <div className="flex min-h-screen">
+      <Asid />
+      <div className="mr-[25%] flex-1">
+        <Outlet />
+      </div>
+    </div>
+  );
 }

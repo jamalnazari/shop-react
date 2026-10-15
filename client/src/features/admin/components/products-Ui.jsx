@@ -1,7 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { productService } from "../../../api/productService";
-import { data } from "react-router-dom";
 export default function ProductUi() {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({
@@ -62,12 +60,12 @@ export default function ProductUi() {
             await productService.delete(id);
             setProducts(products.filter(product => product.id !== id));
         } catch (error) {
-            console.log(error);
+            console.error("Error deleting product:", error);
         }
     };
 
     return (
-        <div className="p-4 w-3/4">
+        <div className="p-4 w-full">
             {/* فرم اضافه کردن محصول */}
             <form onSubmit={addProduct} className="flex flex-col gap-3 mb-8 p-4 border rounded-lg">
                 <h2 className="text-xl font-bold">➕ افزودن محصول جدید</h2>

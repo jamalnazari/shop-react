@@ -53,7 +53,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="shrink-0">
-                  <img style={{width:"195px" , height:"35px"}} src="digikala-logo.svg" alt="" />
+                  <img src={`${import.meta.env.BASE_URL}digikala-logo.svg`} alt="دیجی‌کالا" />
               </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
            <div className="bg-white rounded-[30px] mx-[4%] border-2 w-[85%] flex flex-row-reverse">
              <FontAwesomeIcon className="m-2 pt-1 text-slate-300" icon={faSearch}/>
              <p className="m-1 pt-2 text-xs text-slate-300">جستجو در</p>
-             <img src="digikala-logo.svg" alt="" className="w-[90px] m-1 h-[30px]"/>
+             <img className="w-[90px] h-auto self-center" src={`${import.meta.env.BASE_URL}digikala-logo.svg`} alt="دیجی‌کالا" />
            </div>
            <div className="p-2 bg-white text-center border-2 rounded-[50%] w-[45px]">
              <FontAwesomeIcon className="text-lg" icon={faBell} />

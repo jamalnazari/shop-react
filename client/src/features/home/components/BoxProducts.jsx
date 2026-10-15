@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-
 export default function BoxProducts({data}){
-     
+
     return (
             <div className="flex justify-center flex-wrap mt-10">
                {data.map(product=>(
