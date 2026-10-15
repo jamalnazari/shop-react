@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { productService } from "../../../api/productService";
+import Button from "../../../shared/components/buttons/button";
 export default function ProductUi() {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({
@@ -113,9 +114,9 @@ export default function ProductUi() {
                     name="image"
                 />
 
-                <button type="submit" className="bg-green-500 text-white p-2 rounded hover:bg-green-700">
+                <Button type="submit" variant="success" size="md">
                     افزودن محصول
-                </button>
+                </Button>
             </form>
 
             {/* لیست محصولات */}
@@ -126,12 +127,13 @@ export default function ProductUi() {
                         <img src={product.image} alt="" className="w-16 h-16 object-cover rounded" />
                         <p className="flex-1">{product.name}</p>
                         <p className="font-bold">{product.price.toLocaleString()} تومان</p>
-                        <button 
+                        <Button 
+                            variant="danger"
+                            size="sm"
                             onClick={() => deleteProduct(product.id)}
-                            className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-700"
                         >
                             حذف
-                        </button>
+                        </Button>
                     </div>
                 ))}
             </div>

@@ -1,6 +1,7 @@
 
 import { CartContext } from "../context/cartcontext";
 import { useContext } from "react";
+import Button from "../../../shared/components/buttons/button";
 const Cart = () => {
   const {items , removeFromCart}=useContext(CartContext)
 
@@ -35,12 +36,14 @@ const Cart = () => {
               <span className="text-xl font-bold text-red-600 whitespace-nowrap">
                 {product.price?.toLocaleString()} تومان
               </span>
-              <button
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => removeFromCart(product)}
-                className="text-red-500 hover:text-red-700 transition text-sm font-medium"
+                className="text-red-500 hover:text-red-700 hover:bg-red-50 text-sm font-medium"
               >
                 ❌ حذف
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -64,12 +67,14 @@ const Cart = () => {
               {items.reduce((total, item) => total + (item.price || 0), 0).toLocaleString()} تومان
             </p>
           </div>
-          <button
+          <Button
+            variant="danger"
+            size="lg"
             onClick={() => handleCheckout()}
-            className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-xl transition-colors duration-200 shadow-md"
+            className="w-full sm:w-auto font-bold rounded-xl shadow-md"
           >
             ادامه فرآیند خرید
-          </button>
+          </Button>
         </div>
       </div>
     )}

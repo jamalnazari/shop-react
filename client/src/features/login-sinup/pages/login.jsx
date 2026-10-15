@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 import { ROUTES } from "../../../constants/routes";
 import { validateLoginInput } from "../utils/loginValidator";
+import Button from "../../../shared/components/buttons/button";
 
 function Login() {
   const { login } = useAuth();
@@ -75,13 +76,15 @@ function Login() {
             />
           </div>
 
-          <button
+          <Button
             type="submit"
+            variant="danger"
+            size="lg"
             disabled={isLoading}
-            className="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg transition duration-200 text-sm md:text-base"
+            className="w-full font-bold"
           >
             {isLoading ? "در حال ورود..." : "ورود به دیجی‌کالا"}
-          </button>
+          </Button>
         </form>
 
         {/* شرایط و قوانین */}

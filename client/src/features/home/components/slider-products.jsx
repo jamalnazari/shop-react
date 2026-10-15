@@ -2,6 +2,7 @@ import { useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
+import Button from "../../../shared/components/buttons/button"
 
 export default function SliderProducts({ data }) {
     const scrollref = useRef(null)
@@ -35,7 +36,9 @@ export default function SliderProducts({ data }) {
             </div>
 
             {/* دکمه قبلی - فقط در دسکتاپ */}
-            <button 
+            <Button 
+                variant="none"
+                size="none"
                 onClick={prev}
                 className="absolute text-white z-10 hidden lg:flex items-center justify-center
                     top-1/2 -translate-y-1/2 left-[2%] 
@@ -43,10 +46,12 @@ export default function SliderProducts({ data }) {
                     transition-all duration-300 cursor-pointer"
             >
                 <FontAwesomeIcon icon={faChevronLeft} className="text-sm" />
-            </button>
+            </Button>
 
             {/* دکمه بعدی - فقط در دسکتاپ */}
-            <button 
+            <Button 
+                variant="none"
+                size="none"
                 onClick={next}
                 className="absolute text-white z-10 hidden lg:flex items-center justify-center
                     top-1/2 -translate-y-1/2 right-[17%] 
@@ -54,7 +59,7 @@ export default function SliderProducts({ data }) {
                     transition-all duration-300 cursor-pointer"
             >
                 <FontAwesomeIcon icon={faChevronRight} className="text-sm" />
-            </button>
+            </Button>
 
             {/* کانتینر اسکرول افقی */}
             <div 

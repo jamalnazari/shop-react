@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../cart/context/cartcontext";
 import { ROUTES } from "../../../constants/routes";
+import Button from "../../../shared/components/buttons/button";
 
 export default function ProductUi({data}){
   const { items, addToCart } = useContext(CartContext);
@@ -54,12 +55,14 @@ export default function ProductUi({data}){
                 </Link>
               </div>
             ) : (
-              <button
+              <Button
+                variant="danger"
+                size="lg"
                 onClick={() => addToCart(data)}
-                className="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 shadow-md"
+                className="mt-8 w-full font-bold shadow-md rounded-xl"
               >
                 افزودن به سبد خرید
-              </button>
+              </Button>
             )}
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Button from "../../shared/components/buttons/button";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -23,12 +24,14 @@ class ErrorBoundary extends Component {
             <p className="text-gray-700 mb-6">
               متاسفانه یک خطا رخ داد. لطفاً صفحه را بارگذاری کنید.
             </p>
-            <button
+            <Button
+              variant="danger"
+              size="md"
               onClick={() => window.location.reload()}
-              className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition"
+              className="font-bold"
             >
               بارگذاری مجدد
-            </button>
+            </Button>
           </div>
         </div>
       );

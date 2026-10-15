@@ -4,6 +4,7 @@ import { faShoppingCart, faSearch, faL } from "@fortawesome/free-solid-svg-icons
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 import "./nav.css";
 import React , { useEffect, useState } from "react";
+import Button from "../../shared/components/buttons/button";
 
 const Navbar = () => {
 
@@ -39,7 +40,9 @@ const Navbar = () => {
             </div>
             <div className="grow">
               <Link to={"/shop-react/login"}>
-                <button className="w-full border rounded-[7px] p-2 text-xs">ورود | ثبت‌نام</button>
+                <Button variant="none" size="sm" className="w-full border rounded-[7px] p-2 text-xs text-gray-700 hover:bg-gray-50">
+                  ورود | ثبت‌نام
+                </Button>
               </Link>
             </div>
           </div>
