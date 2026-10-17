@@ -20,6 +20,7 @@ export function AppRoutes() {
         <Route path="login" element={<Login />} />
         <Route path="cart" element={<CartPage />} />
         <Route path="category/:slug" element={<CategoryPage />} />
+        <Route path="product" element={<ProductDetailPage />} />
         <Route path="product/:id" element={<ProductDetailPage />} />
         <Route path="categories" element={<Dastehha />} />
         <Route path="admin" element={<ProtectedRoute />}>
